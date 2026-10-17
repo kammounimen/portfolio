@@ -55,7 +55,7 @@ footer{border-top:1px solid var(--line);padding:26px 0;text-align:center;color:v
 .rv{opacity:0;transform:translateY(26px);transition:.7s}.rv.in{opacity:1;transform:none}
 .tag:hover{transform:scale(1.08);border-color:var(--p2)}
 .si{width:15px;height:15px;opacity:.72}[data-t=dark] .si{filter:invert(1)}
-#lg{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:99px;height:36px;padding:0 13px;cursor:pointer;font-weight:700;font-size:13px}
+#lg{display:flex;border:1px solid var(--line);background:var(--card);border-radius:99px;padding:3px;gap:2px}#lg button{border:0;background:none;color:var(--mut);border-radius:99px;height:28px;padding:0 13px;font-weight:700;font-size:13px;cursor:pointer;transition:.25s}#lg button.on{background:#1F2937;color:#fff}[data-t=dark] #lg button.on{background:var(--p)}
 .pb{height:230px}#pc{width:100%;height:100%;display:block}
 .cd,.cr{position:fixed;left:0;top:0;pointer-events:none;z-index:99;border-radius:50%}
 .cd{width:8px;height:8px;margin:-4px;background:var(--p)}
@@ -67,7 +67,7 @@ footer{border-top:1px solid var(--line);padding:26px 0;text-align:center;color:v
 </head>
 <body>
 <nav><div class="w"><a href="#hero" class="logo">Imen Kammoun<b>.</b></a>
-<div class="links"><a href="#skills">Compétences</a><a href="#projects">Projets</a><a href="#experience">Expérience</a><a href="#education">Parcours</a><a href="#credentials">Certifications</a><a href="#contact">Contact</a><button id="lg" aria-label="Language">EN</button><button id="tg" aria-label="Changer de thème">🌙</button></div></div></nav>
+<div class="links"><a href="#skills">Compétences</a><a href="#projects">Projets</a><a href="#experience">Expérience</a><a href="#education">Parcours</a><a href="#credentials">Certifications</a><a href="#contact">Contact</a><div id="lg" role="group" aria-label="Language"><button data-l="fr">FR</button><button data-l="en">EN</button></div><button id="tg" aria-label="Changer de thème">🌙</button></div></div></nav>
 
 <section id="hero"><div class="w hero">
 <div>
@@ -97,14 +97,18 @@ footer{border-top:1px solid var(--line);padding:26px 0;text-align:center;color:v
 <section id="contact" style="background:var(--soft)"><div class="w"><span class="eyebrow">Restons en contact</span><h2>Contact</h2>
 <div class="grid g3">
 <a class="card" href="mailto:imen.kammoun@enis.tn"><span class="ico">✉️</span><h3>Email</h3><p>imen.kammoun@enis.tn</p></a>
+<a class="card" id="c-ph" hidden><span class="ico">📱</span><h3>Téléphone</h3><p></p></a>
+<a class="card" id="c-lo" href="https://maps.google.com/?q=Sfax,Tunisia" target="_blank" rel="noopener"><span class="ico">📍</span><h3>Localisation</h3><p>Sfax, Tunisie</p></a>
 <a class="card" href="https://www.linkedin.com/in/imen-kammoun-a26a8435a/" target="_blank" rel="noopener"><span class="ico">🔗</span><h3>LinkedIn</h3><p>Imen Kammoun</p></a>
-<a class="card" href="https://github.com/kammounimen" target="_blank" rel="noopener"><span class="ico">💻</span><h3>GitHub</h3><p>kammounimen</p></a></div>
+<a class="card" href="https://github.com/kammounimen" target="_blank" rel="noopener"><span class="ico">💻</span><h3>GitHub</h3><p>kammounimen</p></a>
+<a class="card" id="c-av" href="mailto:imen.kammoun@enis.tn"><span class="ico">🎯</span><h3>Disponibilité</h3><p>PFE (Projet de Fin d’Études) — 2027</p></a></div>
 <div class="cta"><h3>Un PFE où la technologie crée de la valeur ?</h3><p style="opacity:.92;margin-top:6px">Disponible pour un Projet de Fin d’Études en 2027, en IA ou en développement full-stack.</p><a class="btn" href="mailto:imen.kammoun@enis.tn">✉ Envoyer un message</a></div></div></section>
 
-<footer>© 2026 Imen Kammoun · git commit -m “open to PFE”</footer>
+<footer>© 2026 Imen Kammoun · Sfax, Tunisia · git commit -m “open to PFE”</footer>
 
 <script>
 const $=s=>document.querySelector(s);
+const PHONE="+216 24 202 249"; /* ex. "+216 XX XXX XXX" */
 const IC={Python:"python",Java:"openjdk","C / C++":"cplusplus","C++":"cplusplus",PHP:"php","PHP/Laminas":"php",JavaScript:"javascript","scikit-learn":"scikitlearn","Scikit-learn":"scikitlearn",TensorFlow:"tensorflow",OpenCV:"opencv",LangGraph:"langchain",Pandas:"pandas",Hadoop:"apachehadoop",HDFS:"apachehadoop",YARN:"apachehadoop",MapReduce:"apachehadoop",Django:"django",FastAPI:"fastapi","Spring Boot":"springboot",Flask:"flask",Linux:"linux",Git:"git",GitLab:"gitlab",K3s:"kubernetes",MQTT:"mqtt",Wireshark:"wireshark",Postman:"postman",JUnit:"junit5",Cucumber:"cucumber",Swagger:"swagger",MySQL:"mysql","Power BI":"powerbi",Qt:"qt",HTML:"html5",AWS:"amazonaws",Tailscale:"tailscale",Jupyter:"jupyter",JWT:"jsonwebtokens"};
 const tg=t=>`<span class="tag">${IC[t]?`<img class="si" alt="" src="https://cdn.jsdelivr.net/npm/simple-icons@11/icons/${IC[t]}.svg" onerror="this.remove()">`:""}${t}</span>`;
 const SK={"Langages":"Python · Java · C / C++ · PHP · SQL · JavaScript","IA & données":"scikit-learn · TensorFlow · OpenCV · LangGraph · RAG · Pandas","Big Data":"Hadoop · HDFS · YARN · MapReduce","Web & back-end":"Django · FastAPI · Spring Boot · Laminas · Flask · API REST","Réseaux, DevOps & outils":"Linux · Git · GitLab · K3s · MQTT · Suricata · Wireshark · Postman","Tests":"JUnit · Cucumber · JaCoCo · Swagger"};
@@ -161,11 +165,12 @@ const S=[['.links a[href="#skills"]',"Skills"],['.links a[href="#projects"]',"Pr
 ['.lead','Engineering student in <b>Computer Engineering</b> at ENIS, specialized in <b>artificial intelligence</b> (LLM agents, RAG, machine learning) and <b>full-stack development</b>. I am looking for a <b>PFE (Final-Year Project internship)</b> to build intelligent systems, from idea to deployment.'],
 ['.stats div:nth-child(1) small',"Internships"],['.stats div:nth-child(2) small',"Projects"],['.stats div:nth-child(3) small',"National exam rank"],['.btns a:nth-child(1)',"✉ Contact me"],
 ['#skills .eyebrow',"Capabilities"],['#skills h2',"Skills &amp; technologies"],['#projects .eyebrow',"Portfolio"],['#projects h2',"Projects"],['#experience .eyebrow',"Professional experience"],['#experience h2',"Experience"],['#education .eyebrow',"Education"],['#education h2',"Academic background"],['#credentials .eyebrow',"Recognition"],['#credentials h2',"Certifications &amp; involvement"],['#contact .eyebrow',"Let’s connect"],
+['#c-ph h3',"Phone"],['#c-lo h3',"Location"],['#c-lo p',"Sfax, Tunisia"],['#c-av h3',"Availability"],['#c-av p',"Final-Year Project (PFE) — 2027"],
 ['.cta h3',"A PFE where technology creates value?"],['.cta p',"Available for a Final-Year Project in 2027, in AI or full-stack development."],['.cta .btn',"✉ Send a message"]];
 const ids=["#sk","#pj","#ex","#ed","#cr"],H={};
 ids.forEach(i=>H[i]=$(i).innerHTML.replace(/ rv"/g,'"'));
 const T=(a,f)=>a.map(f).join("");
-function L(l){localStorage.setItem("l",l);document.documentElement.lang=l;$("#lg").textContent=l=="fr"?"EN":"FR";
+function L(l){localStorage.setItem("l",l);document.documentElement.lang=l;document.querySelectorAll("#lg button").forEach(b=>b.classList.toggle("on",b.dataset.l==l));
 S.forEach(([q,e])=>{const el=$(q);if(!el)return;if(!(q in H))H[q]=el.innerHTML;el.innerHTML=l=="fr"?H[q]:e});
 document.title=l=="fr"?"Imen Kammoun — Élève ingénieure en Génie Informatique":"Imen Kammoun — Computer Engineering Student";
 if(l=="fr"){ids.forEach(i=>$(i).innerHTML=H[i]);return}
@@ -174,7 +179,7 @@ $("#pj").innerHTML=T(PJ,(p,i)=>`<div class="card"><span class="ico">${p[0]}</spa
 $("#ex").innerHTML=T(EX,(e,i)=>`<div class="card"><h3>${EXE[i][0]}</h3><div class="meta">${EXE[i][1]} · ${EXE[i][2]}</div><p>${EXE[i][3]}</p>${T(e[4].split(","),tg)}</div>`);
 $("#ed").innerHTML=T(EDE,e=>`<div class="card"><div class="meta" style="color:var(--p)">${e[0]}</div><h3 style="color:var(--ink)">${e[1]}</h3><p style="margin:2px 0 0">${e[2]}</p></div>`);
 $("#cr").innerHTML=T(CRE,(c,i)=>`<div class="card"><span class="ico">${CR[i][0]}</span><h3 style="color:var(--ink);font-size:16px">${c[0]}</h3><p style="margin:0">${c[1]}</p></div>`)}
-$("#lg").onclick=()=>L(document.documentElement.lang=="fr"?"en":"fr");
+document.querySelectorAll("#lg button").forEach(b=>b.onclick=()=>L(b.dataset.l));
 L(localStorage.getItem("l")||(navigator.language.startsWith("fr")?"fr":"en"));
 /* ---- Particules : un anneau se forme autour de la souris ---- */
 const cv=$("#pc"),cx=cv.getContext("2d");let W,HH,P=[],mx=-9,my=0,tt=0;
@@ -188,6 +193,7 @@ for(const p of P){p.x+=p.v;if(p.x>W)p.x=0;const bx=p.x,by=p.y+Math.sin(tt+p.o)*8
 let ex=0,ey=0;if(d<R+36){const r=R+p.o*2.5;ex=ax+dx/d*r-bx;ey=ay+dy/d*r-by}
 p.ox+=(ex-p.ox)*.12;p.oy+=(ey-p.oy)*.12;cx.globalAlpha=.6;cx.fillStyle=p.a?"#D6336C":ink;cx.fillRect(bx+p.ox,by+p.oy,2,2)}
 requestAnimationFrame(f)})();
+if(PHONE){const a=$("#c-ph");a.hidden=false;a.href="tel:"+PHONE.replace(/\s/g,"");a.querySelector("p").textContent=PHONE}
 /* ---- Curseur personnalisé ---- */
 if(matchMedia("(pointer:fine)").matches){const d=document.createElement("i"),r=document.createElement("i");d.className="cd";r.className="cr";document.body.append(d,r);let x=0,y=0,rx=0,ry=0;
 addEventListener("pointermove",e=>{x=e.clientX;y=e.clientY;d.style.transform=`translate(${x}px,${y}px)`;r.classList.toggle("h",!!e.target.closest("a,button,.card,.tag"))});
