@@ -109,9 +109,9 @@ footer{border-top:1px solid var(--line);padding:26px 0;text-align:center;color:v
 <script>
 const $=s=>document.querySelector(s);
 const PHONE="+216 24 202 249"; /* ex. "+216 XX XXX XXX" */
-const IC={Python:"python",Java:"openjdk","C / C++":"cplusplus","C++":"cplusplus",PHP:"php","PHP/Laminas":"php",JavaScript:"javascript","scikit-learn":"scikitlearn","Scikit-learn":"scikitlearn",TensorFlow:"tensorflow",OpenCV:"opencv",LangGraph:"langchain",Pandas:"pandas",Hadoop:"apachehadoop",HDFS:"apachehadoop",YARN:"apachehadoop",MapReduce:"apachehadoop",Django:"django",FastAPI:"fastapi","Spring Boot":"springboot",Flask:"flask",Linux:"linux",Git:"git",GitLab:"gitlab",K3s:"kubernetes",MQTT:"mqtt",Wireshark:"wireshark",Postman:"postman",JUnit:"junit5",Cucumber:"cucumber",Swagger:"swagger",MySQL:"mysql","Power BI":"powerbi",Qt:"qt",HTML:"html5",AWS:"amazonaws",Tailscale:"tailscale",Jupyter:"jupyter",JWT:"jsonwebtokens"};
+const IC={C:"c",HTML5:"html5",CSS:"css3",LangChain:"langchain",Python:"python",Java:"openjdk","C / C++":"cplusplus","C++":"cplusplus",PHP:"php","PHP/Laminas":"php",JavaScript:"javascript","scikit-learn":"scikitlearn","Scikit-learn":"scikitlearn",TensorFlow:"tensorflow",OpenCV:"opencv",LangGraph:"langchain",Pandas:"pandas",Hadoop:"apachehadoop",HDFS:"apachehadoop",YARN:"apachehadoop",MapReduce:"apachehadoop",Django:"django",FastAPI:"fastapi","Spring Boot":"springboot",Flask:"flask",Linux:"linux",Git:"git",GitLab:"gitlab",K3s:"kubernetes",MQTT:"mqtt",Wireshark:"wireshark",Postman:"postman",JUnit:"junit5",Cucumber:"cucumber",Swagger:"swagger",MySQL:"mysql","Power BI":"powerbi",Qt:"qt",HTML:"html5",AWS:"amazonaws",Tailscale:"tailscale",Jupyter:"jupyter",JWT:"jsonwebtokens"};
 const tg=t=>`<span class="tag">${IC[t]?`<img class="si" alt="" src="https://cdn.jsdelivr.net/npm/simple-icons@11/icons/${IC[t]}.svg" onerror="this.remove()">`:""}${t}</span>`;
-const SK={"Langages":"Python · Java · C / C++ · PHP · SQL · JavaScript","IA & données":"scikit-learn · TensorFlow · OpenCV · LangGraph · RAG · Pandas","Big Data":"Hadoop · HDFS · YARN · MapReduce","Web & back-end":"Django · FastAPI · Spring Boot · Laminas · Flask · API REST","Réseaux, DevOps & outils":"Linux · Git · GitLab · K3s · MQTT · Suricata · Wireshark · Postman","Tests":"JUnit · Cucumber · JaCoCo · Swagger"};
+const SK={"Langages":"Python · C · C++ · Java · JavaScript · HTML5 · CSS · PHP","Frameworks & bibliothèques":"Spring Boot · FastAPI · Django · Flask · Laminas · Qt · Scikit-learn · LangChain · LangGraph · Optuna","IA & données":"IA générative · Agents IA · RAG · LLM · OCR · Hadoop · MySQL · Power BI","Réseaux, DevOps & outils":"Linux · Git · GitLab · K3s · MQTT · Suricata · Wireshark · Postman · Swagger","Tests":"JUnit · Cucumber · JaCoCo"};
 $("#sk").innerHTML=Object.entries(SK).map(([k,v])=>`<div class="card rv"><h3>${k}</h3>${v.split(" · ").map(t=>`${tg(t)}`).join("")}</div>`).join("");
 const R="https://github.com/kammounimen/";
 const PJ=[
@@ -144,7 +144,7 @@ const ap=t=>{document.documentElement.dataset.t=t;tb.textContent=t=="dark"?"☀�
 tb.onclick=()=>{const t=document.documentElement.dataset.t=="dark"?"light":"dark";localStorage.setItem("t",t);ap(t)};
 
 /* ---- Langue FR/EN ---- */
-const SKE=["Languages","AI & data","Big Data","Web & back-end","Networks, DevOps & tools","Testing"];
+const SKE=["Languages","Frameworks & libraries","AI & data","Networks, DevOps & tools","Testing"];
 const PJE=[["AI-powered invoice management platform","ICT internship · Jun – Jul 2026","OCR + LLM + smart search + AI agents to extract and retrieve invoice data. Multi-layer architecture: Django admin, Laminas ERP, FastAPI AI layer."],
 ["FogWatch","Team project","Collaborative attack detection for fog computing: Suricata detects, a correlator aggregates events over MQTT and triggers an nftables block."],
 ["AI-driven functional testing platform","Final-year project (PFA) · 2026","LangGraph agents generate Gherkin tests from User Stories, with a JWT-secured Spring Boot orchestrator, JaCoCo coverage, a RAG pipeline and CI/CD."],
@@ -174,7 +174,7 @@ function L(l){localStorage.setItem("l",l);document.documentElement.lang=l;docume
 S.forEach(([q,e])=>{const el=$(q);if(!el)return;if(!(q in H))H[q]=el.innerHTML;el.innerHTML=l=="fr"?H[q]:e});
 document.title=l=="fr"?"Imen Kammoun — Élève ingénieure en Génie Informatique":"Imen Kammoun — Computer Engineering Student";
 if(l=="fr"){ids.forEach(i=>$(i).innerHTML=H[i]);return}
-$("#sk").innerHTML=T(Object.values(SK),(v,i)=>`<div class="card"><h3>${SKE[i]}</h3>${T(v.split(" · "),tg)}</div>`);
+$("#sk").innerHTML=T(Object.values(SK),(v,i)=>`<div class="card"><h3>${SKE[i]}</h3>${T(v.split(" · ").map(x=>({"IA générative":"Generative AI","Agents IA":"AI agents"}[x]||x)),tg)}</div>`);
 $("#pj").innerHTML=T(PJ,(p,i)=>`<div class="card"><span class="ico">${p[0]}</span><h3>${PJE[i][0]}</h3><div class="meta">${PJE[i][1]}</div><p>${PJE[i][2]}</p>${T(p[4].split(","),tg)}<br>${p[5]?`<a class="go" href="${R+p[5]}" target="_blank" rel="noopener">⧉ View repository</a>`:""}</div>`);
 $("#ex").innerHTML=T(EX,(e,i)=>`<div class="card"><h3>${EXE[i][0]}</h3><div class="meta">${EXE[i][1]} · ${EXE[i][2]}</div><p>${EXE[i][3]}</p>${T(e[4].split(","),tg)}</div>`);
 $("#ed").innerHTML=T(EDE,e=>`<div class="card"><div class="meta" style="color:var(--p)">${e[0]}</div><h3 style="color:var(--ink)">${e[1]}</h3><p style="margin:2px 0 0">${e[2]}</p></div>`);
