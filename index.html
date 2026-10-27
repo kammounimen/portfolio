@@ -69,9 +69,74 @@ input:focus,select:focus,textarea:focus{outline:0;border-color:var(--p);box-shad
 footer{border-top:1px solid var(--line);padding:26px 0;text-align:center;color:var(--mut);font-size:14px}
 .rv{opacity:0;transform:translateY(26px);transition:.7s}.rv.in{opacity:1;transform:none}
 @media(max-width:900px){.hero,.g2,.g3,.ct{grid-template-columns:1fr}.g5{grid-template-columns:repeat(2,1fr)}.links a{display:none}.ph{order:-1;width:230px}.chip{display:none}.fr2{grid-template-columns:1fr}}
+
+/* ===== barre de progression ===== */
+#bar{position:fixed;top:0;left:0;height:3px;width:0;z-index:20;background:linear-gradient(90deg,var(--p),var(--p2));border-radius:0 3px 3px 0}
+
+/* ===== curseur point + cercle ===== */
+#cd,#cr2{position:fixed;left:0;top:0;pointer-events:none;z-index:99;border-radius:50%;opacity:0}
+#cd{width:10px;height:10px;margin:-5px 0 0 -5px;background:var(--p)}
+#cr2{width:44px;height:44px;margin:-22px 0 0 -22px;border:1.5px solid var(--p);background:radial-gradient(circle,rgba(214,51,108,.16),transparent 70%);transition:opacity .3s,width .25s,height .25s,margin .25s}
+#cr2.big{width:68px;height:68px;margin:-34px 0 0 -34px}
+html.cu #cd,html.cu #cr2{opacity:1}
+html.cu,html.cu *{cursor:none!important}
+@media(hover:none){#cd,#cr2{display:none}}
+
+/* ===== nom en particules ===== */
+#name{padding:50px 0 30px}
+#pc{width:100%;height:clamp(180px,26vw,320px);display:block;touch-action:pan-y}
+.hint{text-align:center;color:var(--mut);font-size:14px;margin-top:6px}
+
+/* ===== icônes des technologies ===== */
+.tag{display:inline-flex;align-items:center;gap:7px;padding:5px 14px;font-size:13.5px}
+.tag img{width:18px;height:18px;object-fit:contain}
+[data-t=dark] .tag img{background:#fff;border-radius:5px;padding:1px}
+
+/* ===== projets : plus grands et plus espacés ===== */
+#projects{padding:110px 0}
+#projects .w{max-width:1320px}
+#pj{grid-template-columns:repeat(auto-fill,minmax(min(100%,380px),1fr));gap:36px}
+#pj .card{padding:32px}
+#pj .card h3{font-size:22px}
+#pj .card p{font-size:15.5px;line-height:1.7}
+#pj .ico{font-size:38px}
+#pj .mx b{font-size:20px}
+#pj .tag{font-size:13px}
+
+/* ===== parcours / éducation : plus large et plus lisible ===== */
+#path{padding:110px 0}
+#path .w{max-width:1000px}
+#tl{padding-left:46px;margin-left:12px}
+#tl>div{margin-bottom:38px}
+#tl>div::before{left:-53px;top:38px;width:17px;height:17px}
+#tl .card{padding:34px 38px}
+#tl .card h3{font-size:23px;margin:8px 0 4px}
+#tl .card p{font-size:16.5px;line-height:1.75}
+#tl .meta{font-size:14px}
+#tl .gr span{font-size:15px;padding:8px 18px}
+
+/* ===== message de confirmation ===== */
+#ts{position:fixed;left:50%;bottom:28px;transform:translate(-50%,30px);background:var(--card);color:var(--ink);border:1px solid var(--p);border-radius:14px;padding:13px 22px;font-weight:700;font-size:14.5px;box-shadow:var(--sh);opacity:0;pointer-events:none;transition:.35s;z-index:50}
+#ts.show{opacity:1;transform:translate(-50%,0)}
+.send:disabled{opacity:.6;cursor:wait}
+
+/* ===== footer ===== */
+footer{background:linear-gradient(180deg,#2a1220,#1d0c16);color:#d9bfcc;border:0;padding:64px 0 26px;text-align:left}
+.ft{display:grid;grid-template-columns:1.3fr 1fr 1.2fr;gap:40px;align-items:start}
+footer .logo{color:#fff;font-size:24px}
+footer p{margin-top:10px;font-size:14.5px;max-width:330px}
+footer h4{color:#fff;font-size:13px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:14px}
+.fn,.fi{display:grid;gap:9px;font-size:14.5px}
+.fn a,.fi a{transition:.2s}
+.fn a:hover,.fi a:hover{color:#fff;transform:translateX(3px)}
+.fb2{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-top:40px;padding-top:22px;border-top:1px solid rgba(255,255,255,.12);font-size:13.5px}
+#up{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;font-size:20px;color:#fff;background:linear-gradient(135deg,var(--p),var(--p2));box-shadow:0 8px 22px rgba(214,51,108,.45);transition:.25s}
+#up:hover{transform:translateY(-4px)}
+@media(max-width:900px){.ft{grid-template-columns:1fr}.fb2{flex-direction:column;text-align:center}}
 </style>
 </head>
 <body>
+<div id="bar"></div><div id="cd"></div><div id="cr2"></div><div id="ts"></div>
 <nav><div class="w"><a href="#hero" class="logo">Imen Kammoun<b>.</b></a>
 <div class="links"><a href="#skills" data-k="n1"></a><a href="#projects" data-k="n2"></a><a href="#path" data-k="n3"></a><a href="#credentials" data-k="n4"></a><a href="#contact" data-k="n5"></a>
 <div id="lg"><button data-l="fr">FR</button><button data-l="en">EN</button></div><button class="ib" id="tg" aria-label="Theme">🌙</button></div></div></nav>
@@ -92,6 +157,8 @@ footer{border-top:1px solid var(--line);padding:26px 0;text-align:center;color:v
 <div class="ph"><div class="c">IK<img src="photo.jpg.jfif" alt="Imen Kammoun" onerror="this.remove()"></div><span class="chip c1">🏅 ENIS · 6/81</span><span class="chip c2" id="chip2"></span></div>
 </div></section>
 
+<section id="name"><div class="w"><canvas id="pc"></canvas><p class="hint" data-k="hint"></p></div></section>
+
 <section id="skills" class="alt"><div class="w"><span class="eyebrow" data-k="e1"></span><h2 data-k="h1"></h2><div class="grid g2 sk" id="sk"></div></div></section>
 <section id="projects"><div class="w"><span class="eyebrow" data-k="e2"></span><h2 data-k="h2"></h2><p class="sub" data-k="sub2"></p><div class="fl" id="fl"></div><div class="grid g3" id="pj"></div></div></section>
 <section id="path" class="alt"><div class="w"><span class="eyebrow" data-k="e3"></span><h2 data-k="h3"></h2><div class="tl" id="tl"></div></div></section>
@@ -110,17 +177,30 @@ footer{border-top:1px solid var(--line);padding:26px 0;text-align:center;color:v
 <form id="f" onsubmit="send(event)">
 <div class="fr2"><label><span data-k="f1"></span><input id="nm" required data-p="p1"></label><label>Email *<input id="em" type="email" required placeholder="vous@exemple.com"></label></div>
 <label><span data-k="f2"></span><input id="sb" required data-p="p2"></label>
-<label><span data-k="f3"></span><select id="md"><option value="wa">WhatsApp (+216 24 202 249)</option><option value="mail">Email (imen.kammoun@enis.tn)</option></select></label>
+<label><span data-k="f3"></span><select id="md"><option value="mail">Email (imen.kammoun@enis.tn)</option><option value="wa">WhatsApp (+216 24 202 249)</option></select></label>
 <label>Message *<textarea id="ms" required data-p="p3"></textarea></label>
 <button class="send" type="submit" data-k="snd"></button></form>
 </div></div></section>
-<footer>© 2026 Imen Kammoun · Sfax, Tunisia · git commit -m “open to PFE”</footer>
+
+<footer><div class="w">
+<div class="ft">
+ <div><a href="#hero" class="logo">Imen Kammoun<b>.</b></a><p data-k="ftp"></p></div>
+ <div><h4>Navigation</h4><div class="fn"><a href="#skills" data-k="n1"></a><a href="#projects" data-k="n2"></a><a href="#path" data-k="n3"></a><a href="#credentials" data-k="n4"></a><a href="#contact" data-k="n5"></a></div></div>
+ <div><h4>Contact</h4><div class="fi">
+  <a href="mailto:imen.kammoun@enis.tn">✉️ imen.kammoun@enis.tn</a>
+  <a href="tel:+21624202249">📱 +216 24 202 249</a>
+  <span>📍 Sfax, Tunisie</span>
+  <a href="https://www.linkedin.com/in/imen-kammoun-a26a8435a/" target="_blank" rel="noopener">🔗 LinkedIn</a>
+  <a href="https://github.com/kammounimen" target="_blank" rel="noopener">💻 GitHub</a></div></div>
+</div>
+<div class="fb2"><span>© 2026 Imen Kammoun · <span data-k="ft"></span> · git commit -m “open to PFE”</span><a href="#hero" id="up" aria-label="Top">↑</a></div>
+</div></footer>
 
 <script>
 const $=s=>document.querySelector(s),R="https://github.com/kammounimen/";
 let L="fr";try{L=localStorage.getItem("l")||(navigator.language.startsWith("fr")?"fr":"en")}catch(e){}
-const D={fr:{n1:"Compétences",n2:"Projets",n3:"Parcours",n4:"Certifications",n5:"Contact",badge:"Disponible pour un PFE 2027",lead:"Élève ingénieure en <b>Génie Informatique</b> à l’ENIS (<b>rang 6/81</b>), spécialisée en <b>IA</b> (agents LLM, RAG, ML), <b>Cloud &amp; Big Data</b> et <b>full-stack</b>. Je cherche un <b>PFE</b> pour concevoir des systèmes intelligents, de l’idée jusqu’au déploiement.",s1:"Stages",s2:"Projets",s3:"Rang concours national",s4:"Moyenne 2ᵉ année ENIS",cta:"✉ Me contacter",e1:"Capacités",h1:"Compétences & technologies",e2:"Portfolio",h2:"Projets",sub2:"15 projets en IA, cloud, data, sécurité, blockchain et back-end. Filtre par domaine :",all:"Tous",e3:"Parcours",h3:"Expérience & formation",e4:"Reconnaissances",h4:"Certifications & engagement",e5:"Restons en contact",ch:"Un PFE où la technologie crée de la valeur ? <span>Parlons-en.</span>",cs:"Je recherche un PFE en 2027 en IA ou développement full-stack. Un projet, une question ? Écrivez-moi, je réponds rapidement.",av:"Disponible pour un PFE en 2027",ph:"Téléphone",lo:"Localisation",f1:"Nom *",f2:"Sujet *",f3:"Je préfère être contactée par *",p1:"Votre nom",p2:"Quel est l’objet de votre message ?",p3:"Écrivez votre message ici…",snd:"Envoyer le message ↗",repo:"⧉ Voir le dépôt",hi:"Bonjour Imen,",mn:"Je m’appelle",sj:"Sujet"},
-en:{n1:"Skills",n2:"Projects",n3:"Journey",n4:"Certifications",n5:"Contact",badge:"Available for a 2027 final-year project",lead:"Engineering student in <b>Computer Engineering</b> at ENIS (<b>rank 6/81</b>), specialized in <b>AI</b> (LLM agents, RAG, ML), <b>Cloud &amp; Big Data</b> and <b>full-stack</b>. I’m looking for a <b>PFE internship</b> to build intelligent systems, from idea to deployment.",s1:"Internships",s2:"Projects",s3:"National exam rank",s4:"ENIS 2nd-year average",cta:"✉ Contact me",e1:"Capabilities",h1:"Skills & technologies",e2:"Portfolio",h2:"Projects",sub2:"15 projects across AI, cloud, data, security, blockchain and back-end. Filter by domain:",all:"All",e3:"Journey",h3:"Experience & education",e4:"Recognition",h4:"Certifications & involvement",e5:"Let’s connect",ch:"A PFE where technology creates value? <span>Let’s talk.</span>",cs:"I’m looking for a 2027 PFE in AI or full-stack development. A project, a question? Write to me, I reply quickly.",av:"Available for a 2027 PFE internship",ph:"Phone",lo:"Location",f1:"Name *",f2:"Subject *",f3:"I prefer to be contacted by *",p1:"Your name",p2:"What is this about?",p3:"Write your message here…",snd:"Send message ↗",repo:"⧉ View repository",hi:"Hello Imen,",mn:"My name is",sj:"Subject"}};
+const D={fr:{n1:"Compétences",n2:"Projets",n3:"Parcours",n4:"Certifications",n5:"Contact",badge:"Disponible pour un PFE 2027",lead:"Élève ingénieure en <b>Génie Informatique</b> à l’ENIS (<b>rang 6/81</b>), spécialisée en <b>IA</b> (agents LLM, RAG, ML), <b>Cloud &amp; Big Data</b> et <b>full-stack</b>. Je cherche un <b>PFE</b> pour concevoir des systèmes intelligents, de l’idée jusqu’au déploiement.",s1:"Stages",s2:"Projets",s3:"Rang concours national",s4:"Moyenne 2ᵉ année ENIS",cta:"✉ Me contacter",e1:"Capacités",h1:"Compétences & technologies",e2:"Portfolio",h2:"Projets",sub2:"15 projets en IA, cloud, data, sécurité, blockchain et back-end. Filtre par domaine :",all:"Tous",e3:"Parcours",h3:"Expérience & formation",e4:"Reconnaissances",h4:"Certifications & engagement",e5:"Restons en contact",ch:"Un PFE où la technologie crée de la valeur ? <span>Parlons-en.</span>",cs:"Je recherche un PFE en 2027 en IA ou développement full-stack. Un projet, une question ? Écrivez-moi, je réponds rapidement.",av:"Disponible pour un PFE en 2027",ph:"Téléphone",lo:"Localisation",f1:"Nom *",f2:"Sujet *",f3:"Je préfère être contactée par *",p1:"Votre nom",p2:"Quel est l’objet de votre message ?",p3:"Écrivez votre message ici…",snd:"Envoyer le message ↗",repo:"⧉ Voir le dépôt",hi:"Bonjour Imen,",mn:"Je m’appelle",sj:"Sujet",hint:"✦ Approche ta souris des points",ft:"Conçu avec passion",ftp:"Élève ingénieure · IA, Cloud & Full-Stack. Disponible pour un PFE en 2027."},
+en:{n1:"Skills",n2:"Projects",n3:"Journey",n4:"Certifications",n5:"Contact",badge:"Available for a 2027 final-year project",lead:"Engineering student in <b>Computer Engineering</b> at ENIS (<b>rank 6/81</b>), specialized in <b>AI</b> (LLM agents, RAG, ML), <b>Cloud &amp; Big Data</b> and <b>full-stack</b>. I’m looking for a <b>PFE internship</b> to build intelligent systems, from idea to deployment.",s1:"Internships",s2:"Projects",s3:"National exam rank",s4:"ENIS 2nd-year average",cta:"✉ Contact me",e1:"Capabilities",h1:"Skills & technologies",e2:"Portfolio",h2:"Projects",sub2:"15 projects across AI, cloud, data, security, blockchain and back-end. Filter by domain:",all:"All",e3:"Journey",h3:"Experience & education",e4:"Recognition",h4:"Certifications & involvement",e5:"Let’s connect",ch:"A PFE where technology creates value? <span>Let’s talk.</span>",cs:"I’m looking for a 2027 PFE in AI or full-stack development. A project, a question? Write to me, I reply quickly.",av:"Available for a 2027 PFE internship",ph:"Phone",lo:"Location",f1:"Name *",f2:"Subject *",f3:"I prefer to be contacted by *",p1:"Your name",p2:"What is this about?",p3:"Write your message here…",snd:"Send message ↗",repo:"⧉ View repository",hi:"Hello Imen,",mn:"My name is",sj:"Subject",hint:"✦ Move your mouse over the dots",ft:"Built with passion",ftp:"Engineering student · AI, Cloud & Full-Stack. Available for a 2027 final-year project."}};
 const SK={"Langages|Languages":"Python · C · C++ · Java · JavaScript · HTML5 · CSS · PHP · Solidity","Frameworks":"Spring Boot · FastAPI · Django · Flask · Laminas · Qt · Scikit-learn · LangChain · LangGraph · Optuna · Hardhat · ethers.js","IA & Data|AI & Data":"IA générative · Agents IA · ReAct · RAG · LLM · OCR · Deep Learning · Vision · Hadoop · HDFS · YARN · MapReduce · MySQL · Power BI","Cloud · Réseaux · DevOps|Cloud · Networks · DevOps":"AWS · Linux · Git · GitLab · CI/CD · K3s · MQTT · Tailscale · nftables · Suricata · Wireshark · JWT · Postman · Swagger","Blockchain":"Ethereum · Solidity · Hardhat · MetaMask · ethers.js · keccak / SHA-256","Tests|Testing":"JUnit · Cucumber · Gherkin · JaCoCo · CI/CD"};
 const F=[["all"],["ai","IA|AI"],["data","Data"],["cloud","Cloud"],["security","Sécurité|Security"],["blockchain","Blockchain"],["qa","QA"],["backend","Back-end"],["embedded","Embarqué|Embedded"]];
 // [domaines, icône, titre, méta, [fr,en], métriques [valeur, label fr|en], stack, dépôt]
@@ -141,7 +221,10 @@ const P=[
 ["ai qa","🔁","RAG & boucle de tests","Variante du PFA",["Génération de tests enrichie par RAG et boucle de correction itérative. Projet en équipe.","Test generation enriched by RAG and an iterative correction loop. Team project."],[["RAG","contexte|context"],["Boucle|Loop","itérative|iterative"],["Équipe|Team","PFA"]],"Python,RAG,LLM","RagAndLoopVersionTestProject"],
 ["backend","🧩","Microservices","Back-end · équipe",["Services Java en microservices (Spring Boot, API REST, sécurité JWT) liés à la plateforme de tests IA.","Java microservices (Spring Boot, REST APIs, JWT security) tied to the AI testing platform."],[["REST","API"],["JWT","sécurité|security"],["Spring Boot","Java"]],"Java,Spring Boot,JWT,REST","microservices"]];
 const T=(s,i)=>{const a=s.split("|");return a[L=="fr"?0:1]??a[0]};
-const tg=t=>`<span class="tag">${t}</span>`;
+// icônes des technologies (devicon) + emojis de secours
+const IC={"python":"python","c":"c","c++":"cplusplus","java":"java","javascript":"javascript","html5":"html5","html":"html5","css":"css3","php":"php","php/laminas":"php","solidity":"solidity","spring boot":"spring","fastapi":"fastapi","django":"django","flask":"flask","qt":"qt","scikit-learn":"scikitlearn","langchain":"langchain","hardhat":"hardhat","hadoop":"hadoop","mysql":"mysql","power bi":"powerbi","aws":"amazonwebservices","linux":"linux","git":"git","gitlab":"gitlab","k3s":"kubernetes","postman":"postman","swagger":"swagger","wireshark":"wireshark","ethereum":"ethereum","junit":"junit","cucumber":"cucumber","jupyter":"jupyter"};
+const EM={"ia générative":"✨","agents ia":"🤖","ia":"🤖","rag":"🔎","llm":"🧠","ocr":"📄","deep learning":"🧬","vision":"👁️","hdfs":"🗄️","yarn":"🧶","mapreduce":"🗺️","ci/cd":"⚙️","mqtt":"📡","tailscale":"🔒","nftables":"🧱","suricata":"🛡️","jwt":"🔑","langgraph":"🕸️","optuna":"🎯","metamask":"🦊","ethers.js":"⬢","keccak / sha-256":"#️⃣","jacoco":"📊","gherkin":"🥒","react":"💭","rest":"🔗","tests":"🧪","reporting":"📊","ml":"📈","laminas":"🧩","cloud":"☁️"};
+const tg=t=>{const k=t.toLowerCase().trim(),s=IC[k],e=EM[k];return `<span class="tag">${s?`<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${s}/${s}-original.svg" alt="" loading="lazy" onerror="if(!this.t){this.t=1;this.src=this.src.replace('-original','-plain')}else this.remove()">`:e?`<span>${e}</span>`:""}${t}</span>`};
 function paint(){
  document.documentElement.lang=L;
  document.querySelectorAll("[data-k]").forEach(e=>e.innerHTML=D[L][e.dataset.k]);
@@ -181,11 +264,50 @@ addEventListener("scroll",()=>{const r=tl.getBoundingClientRect();tl.style.setPr
 const tb=$("#tg");let st="light";try{st=localStorage.getItem("t")||(matchMedia("(prefers-color-scheme:dark)").matches?"dark":"light")}catch(e){}
 const ap=t=>{document.documentElement.dataset.t=t;tb.textContent=t=="dark"?"☀️":"🌙"};ap(st);
 tb.onclick=()=>{const t=document.documentElement.dataset.t=="dark"?"light":"dark";try{localStorage.setItem("t",t)}catch(e){}ap(t)};
-// formulaire : WhatsApp ou email
-function send(e){e.preventDefault();const d=D[L],n=$("#nm").value.trim(),m=$("#em").value.trim(),s=$("#sb").value.trim(),b=$("#ms").value.trim();
- const msg=`${d.hi}\n\n${d.mn} ${n}.\nEmail : ${m}\n${d.sj} : ${s}\n\n${b}`;
- if($("#md").value=="mail")location.href=`mailto:imen.kammoun@enis.tn?subject=${encodeURIComponent(s)}&body=${encodeURIComponent(msg)}`;
- else window.open(`https://wa.me/21624202249?text=${encodeURIComponent(msg)}`,"_blank")}
+
+// formulaire : envoi réel par email (FormSubmit) ou ouverture de WhatsApp
+async function send(e){e.preventDefault();const d=D[L],fr=L=="fr",n=$("#nm").value.trim(),m=$("#em").value.trim(),s=$("#sb").value.trim(),b=$("#ms").value.trim(),
+ msg=`${d.hi}\n\n${d.mn} ${n}.\nEmail : ${m}\n${d.sj} : ${s}\n\n${b}`;
+ if($("#md").value!="mail")return window.open(`https://wa.me/21624202249?text=${encodeURIComponent(msg)}`,"_blank");
+ const btn=$(".send"),old=btn.innerHTML;btn.disabled=true;btn.textContent="…";
+ try{const r=await fetch("https://formsubmit.co/ajax/imen.kammoun@enis.tn",{method:"POST",headers:{"Content-Type":"application/json",Accept:"application/json"},body:JSON.stringify({name:n,email:m,_replyto:m,_subject:"Portfolio · "+s,message:b,_template:"table",_captcha:"false"})});
+  const j=await r.json();if(!r.ok||j.success==="false")throw 0;
+  $("#f").reset();toast(fr?"✅ Message envoyé, merci !":"✅ Message sent, thank you!")}
+ catch(x){toast(fr?"⚠️ Échec de l’envoi, ouverture de ta messagerie…":"⚠️ Sending failed, opening your mail app…");
+  setTimeout(()=>location.href=`mailto:imen.kammoun@enis.tn?subject=${encodeURIComponent(s)}&body=${encodeURIComponent(msg)}`,1500)}
+ btn.disabled=false;btn.innerHTML=old}
+function toast(t){const o=$("#ts");o.textContent=t;o.classList.add("show");setTimeout(()=>o.classList.remove("show"),3500)}
+
+// ===== barre de progression =====
+addEventListener("scroll",()=>{$("#bar").style.width=scrollY/(document.documentElement.scrollHeight-innerHeight)*100+"%"},{passive:true});
+
+// ===== curseur point + cercle =====
+if(matchMedia("(hover:hover)").matches){const d=$("#cd"),r=$("#cr2");let x=0,y=0,rx=0,ry=0;
+ addEventListener("mousemove",e=>{x=e.clientX;y=e.clientY;document.documentElement.classList.add("cu");d.style.transform=`translate(${x}px,${y}px)`});
+ (function a(){rx+=(x-rx)*.15;ry+=(y-ry)*.15;r.style.transform=`translate(${rx}px,${ry}px)`;requestAnimationFrame(a)})();
+ document.addEventListener("mouseover",e=>r.classList.toggle("big",!!e.target.closest("a,button,input,select,textarea,.card")))}
+
+// ===== nom en particules (fuient la souris, se reforment ensuite) =====
+(()=>{const cv=$("#pc"),cx=cv.getContext("2d"),dpr=Math.min(devicePixelRatio||1,2);let W,H,P=[],m={x:-999,y:-999},vis=true;
+ function build(){W=cv.clientWidth;H=cv.clientHeight;cv.width=W*dpr;cv.height=H*dpr;cx.setTransform(dpr,0,0,dpr,0,0);
+  const o=document.createElement("canvas");o.width=W;o.height=H;const c=o.getContext("2d"),T="Imen Kammoun";
+  c.font="800 100px 'Segoe UI',Arial,sans-serif";const fs=Math.min(H*.6,100*W*.92/c.measureText(T).width);
+  c.font=`800 ${fs}px 'Segoe UI',Arial,sans-serif`;c.textAlign="center";c.textBaseline="middle";c.fillText(T,W/2,H/2);
+  const a=c.getImageData(0,0,W,H).data;P=[];
+  for(let y=0;y<H;y+=3)for(let x=0;x<W;x+=3)if(a[(y*W+x)*4+3]>128)P.push({hx:x,hy:y,x:Math.random()*W,y:Math.random()*H,vx:0,vy:0,k:Math.random()<.2})}
+ function loop(){requestAnimationFrame(loop);if(!vis)return;cx.clearRect(0,0,W,H);
+  const R=Math.max(70,W*.09),ink=document.documentElement.dataset.t=="dark"?"#F3F4F6":"#1F2937";
+  for(const p of P){const dx=p.x-m.x,dy=p.y-m.y,d=Math.hypot(dx,dy)||1;
+   if(d<R){const f=(R-d)/R*5;p.vx+=dx/d*f;p.vy+=dy/d*f}
+   p.vx+=(p.hx-p.x)*.05;p.vy+=(p.hy-p.y)*.05;p.vx*=.84;p.vy*=.84;p.x+=p.vx;p.y+=p.vy}
+  cx.fillStyle=ink;for(const p of P)if(!p.k)cx.fillRect(p.x,p.y,2,2);
+  cx.fillStyle="#D6336C";for(const p of P)if(p.k)cx.fillRect(p.x,p.y,2.5,2.5)}
+ const mv=(X,Y)=>{const r=cv.getBoundingClientRect();m.x=X-r.left;m.y=Y-r.top},sc=$("#name");
+ sc.addEventListener("mousemove",e=>mv(e.clientX,e.clientY));sc.addEventListener("mouseleave",()=>m.x=m.y=-999);
+ sc.addEventListener("touchmove",e=>mv(e.touches[0].clientX,e.touches[0].clientY),{passive:true});sc.addEventListener("touchend",()=>m.x=m.y=-999);
+ new IntersectionObserver(e=>vis=e[0].isIntersecting).observe(cv);
+ let t;addEventListener("resize",()=>{clearTimeout(t);t=setTimeout(build,250)});
+ build();loop()})();
 </script>
 </body>
 </html>
