@@ -4,200 +4,188 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Imen Kammoun — Élève ingénieure en Génie Informatique</title>
-<meta name="description" content="Imen Kammoun, élève ingénieure en Génie Informatique à l’ENIS. IA, agents LLM, Big Data et développement full-stack. À la recherche d’un PFE (Projet de Fin d’Études) en 2027.">
+<meta name="description" content="Imen Kammoun, élève ingénieure en Génie Informatique à l’ENIS. IA, agents LLM, Cloud, Big Data et full-stack. À la recherche d’un PFE en 2027.">
 <meta name="theme-color" content="#D6336C">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='16' fill='%23D6336C'/><text x='32' y='43' font-size='30' font-weight='800' text-anchor='middle' fill='white' font-family='Arial'>IK</text></svg>">
 <style>
 :root{--p:#D6336C;--p2:#E0568A;--soft:#FDF0F5;--bg:#fff;--card:#fff;--ink:#1F2937;--mut:#6B7280;--line:#E5E7EB;--sh:0 8px 28px rgba(31,41,55,.07)}
 [data-t=dark]{--bg:#12121A;--card:#1B1B26;--ink:#F3F4F6;--mut:#9CA3AF;--line:#2A2A38;--soft:#241520;--sh:0 8px 28px rgba(0,0,0,.4)}
 *{box-sizing:border-box;margin:0}html{scroll-behavior:smooth;scroll-padding-top:76px}
-body{font-family:'Segoe UI','Avenir Next',Helvetica,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;transition:background .3s}
-a{color:inherit;text-decoration:none}.w{max-width:1100px;margin:auto;padding:0 24px}
+body{font-family:'Segoe UI','Avenir Next',Helvetica,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;transition:background .3s;overflow-x:hidden}
+a{color:inherit;text-decoration:none}.w{max-width:1120px;margin:auto;padding:0 24px}
 nav{position:fixed;inset:0 0 auto;z-index:9;background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
 nav .w{display:flex;align-items:center;justify-content:space-between;height:64px}
 .logo{font-weight:800;font-size:19px}.logo b{color:var(--p)}
-.links{display:flex;gap:26px;align-items:center;font-size:14.5px;font-weight:600;color:var(--mut)}
+.links{display:flex;gap:22px;align-items:center;font-size:14px;font-weight:600;color:var(--mut)}
 .links a:hover,.links a.on{color:var(--p)}
-#tg{border:1px solid var(--line);background:var(--card);border-radius:50%;width:36px;height:36px;cursor:pointer;font-size:16px}
-section{padding:90px 0}
+.ib{border:1px solid var(--line);background:var(--card);border-radius:50%;width:36px;height:36px;cursor:pointer;font-size:16px;color:var(--ink)}
+#lg{display:flex;border:1px solid var(--line);background:var(--card);border-radius:99px;padding:3px}#lg button{border:0;background:none;color:var(--mut);border-radius:99px;height:28px;padding:0 12px;font-weight:700;font-size:13px;cursor:pointer}#lg button.on{background:var(--p);color:#fff}
+section{padding:88px 0;position:relative}.alt{background:var(--soft)}
 .eyebrow{color:var(--p);font-weight:800;font-size:13px;letter-spacing:.14em;text-transform:uppercase}
-h2{font-size:clamp(28px,4vw,38px);font-weight:800;margin:6px 0 34px}
-#hero{padding-top:140px;background:radial-gradient(900px 400px at 85% 0,var(--soft),transparent)}
-.hero{display:grid;grid-template-columns:1.2fr .8fr;gap:50px;align-items:center}
+h2{font-size:clamp(28px,4vw,38px);font-weight:800;margin:6px 0 10px}.sub{color:var(--mut);max-width:640px;margin-bottom:30px}
+#hero{padding-top:140px;overflow:hidden}
+.blob{position:absolute;border-radius:50%;filter:blur(70px);opacity:.55;pointer-events:none;animation:fl 12s ease-in-out infinite alternate}
+.b1{width:420px;height:420px;background:var(--p2);top:-120px;right:-80px;opacity:.28}.b2{width:320px;height:320px;background:#fbb6cd;bottom:-100px;left:-60px;animation-delay:-5s;opacity:.3}
+@keyframes fl{to{transform:translate(30px,40px) scale(1.12)}}
+.hero{display:grid;grid-template-columns:1.2fr .8fr;gap:50px;align-items:center;position:relative}
 .badge{display:inline-flex;gap:9px;align-items:center;border:1px solid var(--line);background:var(--card);border-radius:99px;padding:7px 16px;font-size:13.5px;font-weight:700;box-shadow:var(--sh)}
-.dot{width:9px;height:9px;border-radius:50%;background:var(--p);animation:pl 1.8s infinite}
-@keyframes pl{50%{box-shadow:0 0 0 7px rgba(214,51,108,.18)}}
-h1{font-size:clamp(42px,7vw,76px);line-height:1.05;font-weight:800;margin:20px 0 14px}h1 span{color:var(--p)}
-.lead{color:var(--mut);font-size:17.5px;max-width:560px}.lead b{color:var(--ink)}
-.stats{display:flex;gap:34px;margin:30px 0}.stats div b{display:block;font-size:34px;font-weight:800;color:var(--p)}.stats small{color:var(--mut);font-size:13.5px}
+.dot{width:9px;height:9px;border-radius:50%;background:var(--p);animation:pl 1.8s infinite}@keyframes pl{50%{box-shadow:0 0 0 7px rgba(214,51,108,.18)}}
+h1{font-size:clamp(42px,7vw,76px);line-height:1.05;font-weight:800;margin:20px 0 8px}h1 span{color:var(--p)}
+.tw{font-size:clamp(18px,2.4vw,24px);font-weight:700;color:var(--p);min-height:1.7em}.tw i{display:inline-block;width:2px;height:1.05em;background:currentColor;margin-left:3px;vertical-align:-.12em;animation:bk 1s steps(1) infinite}@keyframes bk{50%{opacity:0}}
+.lead{color:var(--mut);font-size:17px;max-width:580px;margin:10px 0}.lead b{color:var(--ink)}
+.stats{display:flex;flex-wrap:wrap;gap:28px;margin:26px 0}.stats b{display:block;font-size:32px;font-weight:800;color:var(--p)}.stats small{color:var(--mut);font-size:13px}.stats em{font-style:normal;font-size:18px;color:var(--mut)}
 .btns{display:flex;flex-wrap:wrap;gap:12px}
-.btn{padding:12px 22px;border-radius:12px;font-weight:700;font-size:15px;border:1.5px solid var(--line);background:var(--card);transition:.25s}
-.btn:hover{transform:translateY(-3px);border-color:var(--p);box-shadow:var(--sh)}
-.btn.f{background:linear-gradient(135deg,var(--p),var(--p2));color:#fff;border:0}
-.ph{position:relative;width:min(340px,80%);aspect-ratio:1;margin:auto}
-.ph::before{content:"";position:absolute;inset:-14px;border-radius:50%;border:2px dashed var(--p2);animation:rot 30s linear infinite}
-@keyframes rot{to{transform:rotate(360deg)}}
-.ph .c{position:absolute;inset:0;border-radius:50%;overflow:hidden;border:5px solid var(--p);background:var(--soft);display:grid;place-items:center;font-size:84px;font-weight:800;color:var(--p);box-shadow:var(--sh)}
-.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.tag{display:inline-flex;align-items:center;gap:6px;transition:.2s;border:1px solid var(--line);background:var(--card);border-radius:99px;padding:4px 13px;font-size:13px;font-weight:600;margin:3px 4px 3px 0}
-.grid{display:grid;gap:20px}.g2{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}
-.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:24px;box-shadow:var(--sh);transition:.3s;position:relative}
-.card:hover{transform:translateY(-6px) scale(1.04);border-color:var(--p2);box-shadow:0 20px 44px rgba(214,51,108,.16);z-index:3}
-.card h3{font-size:18px;margin:8px 0 4px;color:var(--p)}.card p{color:var(--mut);font-size:15px;margin:8px 0 12px}
-.ico{font-size:30px}.meta{font-size:13px;font-weight:700;color:var(--ink)}
+.btn{padding:12px 22px;border-radius:12px;font-weight:700;font-size:15px;border:1.5px solid var(--line);background:var(--card);transition:.25s;cursor:pointer;color:var(--ink)}
+.btn:hover{transform:translateY(-3px);border-color:var(--p);box-shadow:var(--sh)}.btn.f{background:linear-gradient(135deg,var(--p),var(--p2));color:#fff;border:0}
+.ph{position:relative;width:min(330px,80%);aspect-ratio:1;margin:auto}.ph::before{content:"";position:absolute;inset:-14px;border-radius:50%;border:2px dashed var(--p2);animation:rot 30s linear infinite}@keyframes rot{to{transform:rotate(360deg)}}
+.ph .c{position:absolute;inset:0;border-radius:50%;overflow:hidden;border:5px solid var(--p);background:var(--soft);display:grid;place-items:center;font-size:84px;font-weight:800;color:var(--p);box-shadow:var(--sh)}.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.chip{position:absolute;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:8px 14px;font-size:13px;font-weight:800;box-shadow:var(--sh);animation:fl 5s ease-in-out infinite alternate}.c1{top:6%;left:-12%}.c2{bottom:8%;right:-8%;animation-delay:-2s;color:var(--p)}
+.tag{display:inline-block;border:1px solid var(--line);background:var(--card);border-radius:99px;padding:3px 12px;font-size:12.5px;font-weight:600;margin:3px 4px 3px 0;transition:.2s}.tag:hover{transform:scale(1.07);border-color:var(--p2)}
+.grid{display:grid;gap:20px}.g2{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:repeat(3,1fr)}.g5{grid-template-columns:repeat(5,1fr)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px;box-shadow:var(--sh);transition:.3s;position:relative}
+.card:hover{transform:translateY(-6px);border-color:var(--p2);box-shadow:0 20px 44px rgba(214,51,108,.16)}
+.card h3{font-size:18px;margin:6px 0 2px;color:var(--p)}.card p{color:var(--mut);font-size:14.5px;margin:8px 0 10px}.ico{font-size:28px}.meta{font-size:12.5px;font-weight:700}
+.sk h3{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);margin:0 0 10px}
+.fl{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:26px}.fb{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:99px;padding:8px 16px;font-weight:700;font-size:13.5px;cursor:pointer;transition:.2s}.fb:hover{border-color:var(--p)}.fb.on{background:linear-gradient(135deg,var(--p),var(--p2));color:#fff;border-color:transparent}
+.pj.hide{display:none}.mx{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:10px 0;border-top:1px solid var(--line);padding-top:10px}.mx b{display:block;font-size:17px;color:var(--p);line-height:1.2}.mx:hover b{color:var(--ink)}.mx small{font-size:11px;color:var(--mut)}
 .go{display:inline-block;margin-top:6px;font-weight:700;font-size:14px;color:var(--p)}.go:hover{text-decoration:underline}
-.sk h3{font-size:14px;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);margin:0 0 10px}
-.tl{border-left:3px solid var(--line);padding-left:26px;margin-left:8px}.tl>div{position:relative;margin-bottom:22px}
-.tl>div::before{content:"";position:absolute;left:-36px;top:26px;width:15px;height:15px;border-radius:50%;background:var(--p);border:3px solid var(--bg);box-shadow:0 0 0 3px var(--soft)}
-.cta{background:linear-gradient(135deg,var(--p),var(--p2));color:#fff;border-radius:24px;padding:46px;text-align:center;margin-top:30px}
-.cta h3{font-size:28px}.cta .btn{display:inline-block;margin-top:22px;background:#fff;color:var(--p);border:0}
+.tl{position:relative;margin-left:8px;padding-left:30px;--pr:0%}.tl::before,.tl::after{content:"";position:absolute;left:0;top:0;width:3px;border-radius:3px}.tl::before{bottom:0;background:var(--line)}.tl::after{height:var(--pr);background:linear-gradient(var(--p),var(--p2));box-shadow:0 0 12px var(--p2);transition:height .1s}
+.tl>div{position:relative;margin-bottom:22px}.tl>div::before{content:"";position:absolute;left:-39px;top:26px;width:15px;height:15px;border-radius:50%;background:var(--p);border:3px solid var(--bg);box-shadow:0 0 0 3px var(--soft),0 0 12px var(--p2)}
+.gr{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px}.gr span{background:var(--soft);border:1px solid var(--p2);border-radius:99px;padding:4px 14px;font-size:13px;font-weight:700}.gr b{color:var(--p)}
+.live{display:inline-flex;align-items:center;gap:6px;background:linear-gradient(135deg,var(--p),var(--p2));color:#fff;border-radius:99px;padding:2px 11px;font-size:11px;font-weight:800;letter-spacing:.06em}.live i{width:7px;height:7px;border-radius:50%;background:#fff;animation:pl 1.4s infinite}
+.cr{text-align:center}.cr.act{border-color:var(--p);box-shadow:0 0 0 3px var(--soft),var(--sh)}.cr h3{color:var(--ink);font-size:16px}
+/* contact */
+.ct{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(24px,5vw,60px);background:var(--card);border:1px solid var(--line);border-radius:26px;padding:clamp(24px,4vw,48px);box-shadow:var(--sh);position:relative;overflow:hidden}
+.ct::before{content:"";position:absolute;width:320px;height:320px;border-radius:50%;top:-200px;right:-90px;background:var(--soft)}
+.ct>*{position:relative}.ct h2{font-size:clamp(28px,3.4vw,40px);line-height:1.15}.ct h2 span{background:linear-gradient(135deg,var(--p),var(--p2));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;font-style:italic}
+.pill{display:inline-flex;align-items:center;gap:8px;padding:7px 14px;border:1px solid var(--line);border-radius:99px;font-size:13px;margin-top:14px;background:var(--soft)}.pill i{width:8px;height:8px;border-radius:50%;background:#22c55e;animation:pl 1.8s infinite}
+.cp{display:grid;gap:10px;margin-top:22px}.cp a,.cp div{display:flex;align-items:center;gap:12px;border:1px solid var(--line);border-radius:14px;padding:10px 14px;background:var(--bg);transition:.2s}.cp a:hover{border-color:var(--p);transform:translateX(4px)}
+.cp .i{width:38px;height:38px;border-radius:11px;background:var(--soft);display:grid;place-items:center;font-size:17px;flex-shrink:0}.cp small{display:block;font-size:11px;font-weight:700;color:var(--mut);text-transform:uppercase;letter-spacing:.06em}.cp b{font-size:14px;word-break:break-all}
+form{background:var(--soft);border:1px solid var(--line);border-radius:18px;padding:22px;display:grid;gap:14px}.fr2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+label{font-size:13px;font-weight:700;display:grid;gap:6px}
+input,select,textarea{font:inherit;font-size:14.5px;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:12px;padding:11px 14px;width:100%;transition:.2s}
+input:focus,select:focus,textarea:focus{outline:0;border-color:var(--p);box-shadow:0 0 0 4px rgba(214,51,108,.12)}textarea{min-height:120px;resize:vertical}
+.send{border:0;border-radius:99px;padding:14px;font-weight:800;font-size:15px;color:#fff;cursor:pointer;background:linear-gradient(135deg,var(--p),var(--p2));box-shadow:0 10px 26px rgba(214,51,108,.35);transition:.25s}.send:hover{transform:translateY(-2px);filter:brightness(1.07)}
 footer{border-top:1px solid var(--line);padding:26px 0;text-align:center;color:var(--mut);font-size:14px}
 .rv{opacity:0;transform:translateY(26px);transition:.7s}.rv.in{opacity:1;transform:none}
-.tag:hover{transform:scale(1.08);border-color:var(--p2)}
-.si{width:15px;height:15px;opacity:.72}[data-t=dark] .si{filter:invert(1)}
-#lg{display:flex;border:1px solid var(--line);background:var(--card);border-radius:99px;padding:3px;gap:2px}#lg button{border:0;background:none;color:var(--mut);border-radius:99px;height:28px;padding:0 13px;font-weight:700;font-size:13px;cursor:pointer;transition:.25s}#lg button.on{background:#1F2937;color:#fff}[data-t=dark] #lg button.on{background:var(--p)}
-.pb{height:230px}#pc{width:100%;height:100%;display:block}
-.cd,.cr{position:fixed;left:0;top:0;pointer-events:none;z-index:99;border-radius:50%}
-.cd{width:8px;height:8px;margin:-4px;background:var(--p)}
-.cr{width:36px;height:36px;margin:-18px;border:1.5px solid var(--p2);transition:width .2s,height .2s,margin .2s,background .2s}
-.cr.h{width:58px;height:58px;margin:-29px;background:rgba(214,51,108,.1)}
-@media(pointer:fine){body,a,button{cursor:none}}
-@media(max-width:860px){.hero,.g2,.g3,.g4{grid-template-columns:1fr}.links a:not(#tg){display:none}.ph{order:-1;width:240px}.stats{gap:22px}}
+@media(max-width:900px){.hero,.g2,.g3,.ct{grid-template-columns:1fr}.g5{grid-template-columns:repeat(2,1fr)}.links a{display:none}.ph{order:-1;width:230px}.chip{display:none}.fr2{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
 <nav><div class="w"><a href="#hero" class="logo">Imen Kammoun<b>.</b></a>
-<div class="links"><a href="#skills">Compétences</a><a href="#projects">Projets</a><a href="#experience">Expérience</a><a href="#education">Parcours</a><a href="#credentials">Certifications</a><a href="#contact">Contact</a><div id="lg" role="group" aria-label="Language"><button data-l="fr">FR</button><button data-l="en">EN</button></div><button id="tg" aria-label="Changer de thème">🌙</button></div></div></nav>
+<div class="links"><a href="#skills" data-k="n1"></a><a href="#projects" data-k="n2"></a><a href="#path" data-k="n3"></a><a href="#credentials" data-k="n4"></a><a href="#contact" data-k="n5"></a>
+<div id="lg"><button data-l="fr">FR</button><button data-l="en">EN</button></div><button class="ib" id="tg" aria-label="Theme">🌙</button></div></div></nav>
 
-<section id="hero"><div class="w hero">
+<section id="hero"><div class="blob b1"></div><div class="blob b2"></div><div class="w hero">
 <div>
-<span class="badge"><i class="dot"></i>Disponible pour un PFE (Projet de Fin d’Études) 2027</span>
+<span class="badge"><i class="dot"></i><span data-k="badge"></span></span>
 <h1>Imen <span>Kammoun</span></h1>
-<p class="lead">Élève ingénieure en <b>Génie Informatique</b> à l’ENIS, spécialisée en <b>intelligence artificielle</b> (agents LLM, RAG, machine learning) et en <b>développement full-stack</b>. Je cherche un <b>PFE (Projet de Fin d’Études)</b> pour concevoir des systèmes intelligents, de l’idée jusqu’au déploiement.</p>
-<div class="stats"><div><b data-n="2">0</b><small>Stages</small></div><div><b data-n="11">0</b><small>Projets</small></div><div><b data-n="200">0</b><small>Rang concours national</small></div></div>
-<div class="btns"><a class="btn f" href="mailto:imen.kammoun@enis.tn">✉ Me contacter</a><a class="btn" href="https://www.linkedin.com/in/imen-kammoun-a26a8435a/" target="_blank" rel="noopener">LinkedIn</a><a class="btn" href="https://github.com/kammounimen" target="_blank" rel="noopener">GitHub</a><a class="btn" href="cv-imen-kammoun.pdf" target="_blank">⬇ CV</a></div>
+<div class="tw"><span id="tw"></span><i></i></div>
+<p class="lead" data-k="lead"></p>
+<div class="stats">
+<div><b data-n="2">0</b><small data-k="s1"></small></div>
+<div><b data-n="15">0</b><small data-k="s2"></small></div>
+<div><b><span data-n="200">0</span><em>/1800</em></b><small data-k="s3"></small></div>
+<div><b><span data-n="15.62">0</span></b><small data-k="s4"></small></div></div>
+<div class="btns"><a class="btn f" href="#contact" data-k="cta"></a><a class="btn" href="https://www.linkedin.com/in/imen-kammoun-a26a8435a/" target="_blank" rel="noopener">LinkedIn</a><a class="btn" href="https://github.com/kammounimen" target="_blank" rel="noopener">GitHub</a><a class="btn" href="cv-imen-kammoun.pdf" target="_blank">⬇ CV</a></div>
 </div>
-<div class="ph"><div class="c">IK<img src="photo.jpg.jfif" alt="Imen Kammoun" onerror="this.remove()"></div></div>
+<div class="ph"><div class="c">IK<img src="photo.jpg.jfif" alt="Imen Kammoun" onerror="this.remove()"></div><span class="chip c1">🏅 ENIS · 6/81</span><span class="chip c2" id="chip2"></span></div>
 </div></section>
 
-<div class="pb"><canvas id="pc"></canvas></div>
+<section id="skills" class="alt"><div class="w"><span class="eyebrow" data-k="e1"></span><h2 data-k="h1"></h2><div class="grid g2 sk" id="sk"></div></div></section>
+<section id="projects"><div class="w"><span class="eyebrow" data-k="e2"></span><h2 data-k="h2"></h2><p class="sub" data-k="sub2"></p><div class="fl" id="fl"></div><div class="grid g3" id="pj"></div></div></section>
+<section id="path" class="alt"><div class="w"><span class="eyebrow" data-k="e3"></span><h2 data-k="h3"></h2><div class="tl" id="tl"></div></div></section>
+<section id="credentials"><div class="w"><span class="eyebrow" data-k="e4"></span><h2 data-k="h4"></h2><div class="grid g5" id="cr"></div></div></section>
 
-<section id="skills"><div class="w"><span class="eyebrow">Capacités</span><h2>Compétences &amp; technologies</h2>
-<div class="grid g2 sk" id="sk"></div></div></section>
-
-<section id="projects" style="background:var(--soft)"><div class="w"><span class="eyebrow">Portfolio</span><h2>Projets</h2>
-<div class="grid g3" id="pj"></div></div></section>
-
-<section id="experience"><div class="w"><span class="eyebrow">Parcours professionnel</span><h2>Expérience</h2><div class="tl" id="ex"></div></div></section>
-
-<section id="education" style="background:var(--soft)"><div class="w"><span class="eyebrow">Formation</span><h2>Parcours académique</h2><div class="tl" id="ed"></div></div></section>
-
-<section id="credentials"><div class="w"><span class="eyebrow">Reconnaissances</span><h2>Certifications &amp; engagement</h2><div class="grid g4" id="cr"></div></div></section>
-
-<section id="contact" style="background:var(--soft)"><div class="w"><span class="eyebrow">Restons en contact</span><h2>Contact</h2>
-<div class="grid g3">
-<a class="card" href="mailto:imen.kammoun@enis.tn"><span class="ico">✉️</span><h3>Email</h3><p>imen.kammoun@enis.tn</p></a>
-<a class="card" id="c-ph" hidden><span class="ico">📱</span><h3>Téléphone</h3><p></p></a>
-<a class="card" id="c-lo" href="https://maps.google.com/?q=Sfax,Tunisia" target="_blank" rel="noopener"><span class="ico">📍</span><h3>Localisation</h3><p>Sfax, Tunisie</p></a>
-<a class="card" href="https://www.linkedin.com/in/imen-kammoun-a26a8435a/" target="_blank" rel="noopener"><span class="ico">🔗</span><h3>LinkedIn</h3><p>Imen Kammoun</p></a>
-<a class="card" href="https://github.com/kammounimen" target="_blank" rel="noopener"><span class="ico">💻</span><h3>GitHub</h3><p>kammounimen</p></a>
-<a class="card" id="c-av" href="mailto:imen.kammoun@enis.tn"><span class="ico">🎯</span><h3>Disponibilité</h3><p>PFE (Projet de Fin d’Études) — 2027</p></a></div>
-<div class="cta"><h3>Un PFE où la technologie crée de la valeur ?</h3><p style="opacity:.92;margin-top:6px">Disponible pour un Projet de Fin d’Études en 2027, en IA ou en développement full-stack.</p><a class="btn" href="mailto:imen.kammoun@enis.tn">✉ Envoyer un message</a></div></div></section>
-
+<section id="contact" class="alt"><div class="w"><div class="ct">
+<div><span class="eyebrow" data-k="e5"></span>
+<h2 data-k="ch"></h2><p class="sub" style="margin:10px 0 0" data-k="cs"></p>
+<span class="pill"><i></i><span data-k="av"></span></span>
+<div class="cp">
+<a href="mailto:imen.kammoun@enis.tn"><span class="i">✉️</span><span><small>Email</small><b>imen.kammoun@enis.tn</b></span></a>
+<a href="tel:+21624202249"><span class="i">📱</span><span><small data-k="ph"></small><b>+216 24 202 249</b></span></a>
+<div><span class="i">📍</span><span><small data-k="lo"></small><b>Sfax, Tunisie</b></span></div>
+<a href="https://www.linkedin.com/in/imen-kammoun-a26a8435a/" target="_blank" rel="noopener"><span class="i">🔗</span><span><small>LinkedIn</small><b>Imen Kammoun</b></span></a>
+<a href="https://github.com/kammounimen" target="_blank" rel="noopener"><span class="i">💻</span><span><small>GitHub</small><b>kammounimen</b></span></a></div></div>
+<form id="f" onsubmit="send(event)">
+<div class="fr2"><label><span data-k="f1"></span><input id="nm" required data-p="p1"></label><label>Email *<input id="em" type="email" required placeholder="vous@exemple.com"></label></div>
+<label><span data-k="f2"></span><input id="sb" required data-p="p2"></label>
+<label><span data-k="f3"></span><select id="md"><option value="wa">WhatsApp (+216 24 202 249)</option><option value="mail">Email (imen.kammoun@enis.tn)</option></select></label>
+<label>Message *<textarea id="ms" required data-p="p3"></textarea></label>
+<button class="send" type="submit" data-k="snd"></button></form>
+</div></div></section>
 <footer>© 2026 Imen Kammoun · Sfax, Tunisia · git commit -m “open to PFE”</footer>
 
 <script>
-const $=s=>document.querySelector(s);
-const PHONE="+216 24 202 249"; /* ex. "+216 XX XXX XXX" */
-const IC={C:"c",HTML5:"html5",CSS:"css3",LangChain:"langchain",Python:"python",Java:"openjdk","C / C++":"cplusplus","C++":"cplusplus",PHP:"php","PHP/Laminas":"php",JavaScript:"javascript","scikit-learn":"scikitlearn","Scikit-learn":"scikitlearn",TensorFlow:"tensorflow",OpenCV:"opencv",LangGraph:"langchain",Pandas:"pandas",Hadoop:"apachehadoop",HDFS:"apachehadoop",YARN:"apachehadoop",MapReduce:"apachehadoop",Django:"django",FastAPI:"fastapi","Spring Boot":"springboot",Flask:"flask",Linux:"linux",Git:"git",GitLab:"gitlab",K3s:"kubernetes",MQTT:"mqtt",Wireshark:"wireshark",Postman:"postman",JUnit:"junit5",Cucumber:"cucumber",Swagger:"swagger",MySQL:"mysql","Power BI":"powerbi",Qt:"qt",HTML:"html5",AWS:"amazonaws",Tailscale:"tailscale",Jupyter:"jupyter",JWT:"jsonwebtokens"};
-const tg=t=>`<span class="tag">${IC[t]?`<img class="si" alt="" src="https://cdn.jsdelivr.net/npm/simple-icons@11/icons/${IC[t]}.svg" onerror="this.remove()">`:""}${t}</span>`;
-const SK={"Langages":"Python · C · C++ · Java · JavaScript · HTML5 · CSS · PHP","Frameworks & bibliothèques":"Spring Boot · FastAPI · Django · Flask · Laminas · Qt · Scikit-learn · LangChain · LangGraph · Optuna","IA & données":"IA générative · Agents IA · RAG · LLM · OCR · Hadoop · MySQL · Power BI","Réseaux, DevOps & outils":"Linux · Git · GitLab · K3s · MQTT · Suricata · Wireshark · Postman · Swagger","Tests":"JUnit · Cucumber · JaCoCo"};
-$("#sk").innerHTML=Object.entries(SK).map(([k,v])=>`<div class="card rv"><h3>${k}</h3>${v.split(" · ").map(t=>`${tg(t)}`).join("")}</div>`).join("");
-const R="https://github.com/kammounimen/";
-const PJ=[
-["🧾","Plateforme IA de gestion de factures","Stage ICT · Juin – Juil. 2026","OCR + LLM + recherche intelligente + agents IA pour extraire et retrouver les informations des factures. Architecture multicouche Django / ERP Laminas / FastAPI.","Python,FastAPI,Django,PHP/Laminas,MySQL,OCR,LLM","erp-ai-laminas"],
-["🛡️","FogWatch","Projet d’équipe","Détection collaborative d’attaques pour le fog computing : Suricata détecte, un corrélateur agrège les événements via MQTT et ordonne un blocage nftables.","Suricata,K3s,MQTT,Tailscale","FogWatch"],
-["🧪","Plateforme de tests fonctionnels IA","PFA · 2026","Agents LangGraph générant des tests Gherkin depuis des User Stories, orchestrateur Spring Boot sécurisé par JWT, couverture JaCoCo, pipeline RAG et CI/CD.","LangGraph,Spring Boot,RAG,JaCoCo","langGraph"],
-["📈","Agent IA d’analyse de performance","IA & BI","Un agent détecte les variations de KPI, identifie la région et le produit responsables, puis génère une conclusion en langage naturel. Résultats visualisés dans Power BI.","Python,LLM,Power BI",""],
-["🛍️","Prédiction de churn e-commerce","Machine learning","Clustering, classification du churn et régression optimisés avec Optuna, déployés via une API Flask de prédiction en temps réel.","Scikit-learn,Optuna,Flask","projet_ml_retail"],
-["🐘","Big Data e-commerce","Hadoop / MapReduce","Cluster Hadoop (1 master, 2 slaves) : stockage HDFS, ressources YARN et analyses MapReduce (ventes, clients, répartition géographique).","Hadoop,HDFS,YARN,MapReduce","hadoop-project"],
-["🚗","Simulateur de communication automobile","Stage KPIT · 2025","Simulateur virtuel CAN, CAN FD, Ethernet et SOME/IP sans matériel physique, interface Qt et visualisation du trafic avec Wireshark.","C++,Qt,Linux,Wireshark","automotive-comm-simulator"],
-["🤟","Reconnaissance de signes","Deep learning","Reconnaissance en temps réel des gestes de la main par vision par ordinateur et deep learning, avec traduction en texte. Projet d’équipe.","Python,Vision,Deep Learning,Jupyter","Sign-Language-Recognition-System"],
-["☁️","AWS Vehicle Tracker","Cloud","Interface web de suivi de véhicules s’appuyant sur des services AWS. Projet d’équipe.","HTML,AWS,Cloud","AWS_Vehicle_Tracker"],
-["🔁","RAG & boucle de génération de tests","Agents LLM","Variante de la plateforme de tests IA : génération de tests enrichie par RAG et boucle de correction itérative. Projet d’équipe.","Python,RAG,LLM","RagAndLoopVersionTestProject"],
-["🧩","Architecture microservices","Back-end","Services Java en architecture microservices (Spring Boot, API REST, sécurité JWT), associés à la plateforme de tests IA. Projet d’équipe.","Java,Spring Boot,JWT,REST","microservices"]];
-$("#pj").innerHTML=PJ.map(p=>`<div class="card rv"><span class="ico">${p[0]}</span><h3>${p[1]}</h3><div class="meta">${p[2]}</div><p>${p[3]}</p>${p[4].split(",").map(t=>`${tg(t)}`).join("")}<br>${p[5]?`<a class="go" href="${R+p[5]}" target="_blank" rel="noopener">⧉ Voir le dépôt</a>`:""}</div>`).join("");
-const EX=[["Stage — Plateforme IA de gestion de factures","ICT (Innovative Computer Technology) · Sfax","Juin – Juillet 2026","OCR + LLM + agents IA pour extraire, structurer et retrouver les informations des factures. Architecture multicouche : administration Django, ERP Laminas/PHP, couche IA Python/FastAPI, authentification, rôles et licences.","Python,FastAPI,Django,PHP/Laminas,MySQL,OCR,LLM"],
-["Stage — Simulateur de communication automobile","KPIT Technologies","Juin – Août 2025","Simulation de communications automobiles (CAN, CAN FD, Ethernet, SOME/IP) sans matériel physique, avec interface Qt, analyse Wireshark et isolation réseau sous Linux.","C++,Qt,Linux,Wireshark"]];
-$("#ex").innerHTML=EX.map(e=>`<div class="card rv"><h3>${e[0]}</h3><div class="meta">${e[1]} · ${e[2]}</div><p>${e[3]}</p>${e[4].split(",").map(t=>`${tg(t)}`).join("")}</div>`).join("");
-const ED=[["2024 — Présent","Génie Informatique & Mathématiques Appliquées","ENIS — École Nationale d’Ingénieurs de Sfax · Cycle ingénieur, 3ᵉ année"],["2022 — 2024","Cycle préparatoire Maths-Physique","IPEIS · Concours national : rang 200"],["2022","Baccalauréat Mathématiques","Mention Très Bien"]];
-$("#ed").innerHTML=ED.map(e=>`<div class="card rv"><div class="meta" style="color:var(--p)">${e[0]}</div><h3 style="color:var(--ink)">${e[1]}</h3><p style="margin:2px 0 0">${e[2]}</p></div>`).join("");
-const CR=[["💻","C Advanced","Certification · Cisco"],["🔄","Scrum Fundamentals","Certification · SCRUMstudy"],["🎤","Forum Pitch Yourself For A Career","Engagement · Organisatrice"],["⚡","IEEE","Engagement · Membre"]];
-$("#cr").innerHTML=CR.map(c=>`<div class="card rv"><span class="ico">${c[0]}</span><h3 style="color:var(--ink);font-size:16px">${c[1]}</h3><p style="margin:0">${c[2]}</p></div>`).join("");
-const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target);setTimeout(()=>e.target.classList.remove("rv","in"),900)}}),{threshold:.12});
-document.querySelectorAll(".rv,section .eyebrow,h2").forEach(e=>{e.classList.add("rv");io.observe(e)});
-document.querySelectorAll("[data-n]").forEach(el=>{const n=+el.dataset.n;let i=0;const t=setInterval(()=>{i+=Math.ceil(n/40);if(i>=n){i=n;clearInterval(t)}el.textContent=i},35)});
-const secs=[...document.querySelectorAll("section[id]")],ls=[...document.querySelectorAll(".links a[href^='#']")];
-addEventListener("scroll",()=>{const y=scrollY+120;const c=secs.filter(s=>s.offsetTop<=y).pop();ls.forEach(a=>a.classList.toggle("on",c&&a.getAttribute("href")=="#"+c.id))});
-const tb=$("#tg"),st=localStorage.getItem("t")||(matchMedia("(prefers-color-scheme:dark)").matches?"dark":"light");
+const $=s=>document.querySelector(s),R="https://github.com/kammounimen/";
+let L="fr";try{L=localStorage.getItem("l")||(navigator.language.startsWith("fr")?"fr":"en")}catch(e){}
+const D={fr:{n1:"Compétences",n2:"Projets",n3:"Parcours",n4:"Certifications",n5:"Contact",badge:"Disponible pour un PFE 2027",lead:"Élève ingénieure en <b>Génie Informatique</b> à l’ENIS (<b>rang 6/81</b>), spécialisée en <b>IA</b> (agents LLM, RAG, ML), <b>Cloud &amp; Big Data</b> et <b>full-stack</b>. Je cherche un <b>PFE</b> pour concevoir des systèmes intelligents, de l’idée jusqu’au déploiement.",s1:"Stages",s2:"Projets",s3:"Rang concours national",s4:"Moyenne 2ᵉ année ENIS",cta:"✉ Me contacter",e1:"Capacités",h1:"Compétences & technologies",e2:"Portfolio",h2:"Projets",sub2:"15 projets en IA, cloud, data, sécurité, blockchain et back-end. Filtre par domaine :",all:"Tous",e3:"Parcours",h3:"Expérience & formation",e4:"Reconnaissances",h4:"Certifications & engagement",e5:"Restons en contact",ch:"Un PFE où la technologie crée de la valeur ? <span>Parlons-en.</span>",cs:"Je recherche un PFE en 2027 en IA ou développement full-stack. Un projet, une question ? Écrivez-moi, je réponds rapidement.",av:"Disponible pour un PFE en 2027",ph:"Téléphone",lo:"Localisation",f1:"Nom *",f2:"Sujet *",f3:"Je préfère être contactée par *",p1:"Votre nom",p2:"Quel est l’objet de votre message ?",p3:"Écrivez votre message ici…",snd:"Envoyer le message ↗",repo:"⧉ Voir le dépôt",hi:"Bonjour Imen,",mn:"Je m’appelle",sj:"Sujet"},
+en:{n1:"Skills",n2:"Projects",n3:"Journey",n4:"Certifications",n5:"Contact",badge:"Available for a 2027 final-year project",lead:"Engineering student in <b>Computer Engineering</b> at ENIS (<b>rank 6/81</b>), specialized in <b>AI</b> (LLM agents, RAG, ML), <b>Cloud &amp; Big Data</b> and <b>full-stack</b>. I’m looking for a <b>PFE internship</b> to build intelligent systems, from idea to deployment.",s1:"Internships",s2:"Projects",s3:"National exam rank",s4:"ENIS 2nd-year average",cta:"✉ Contact me",e1:"Capabilities",h1:"Skills & technologies",e2:"Portfolio",h2:"Projects",sub2:"15 projects across AI, cloud, data, security, blockchain and back-end. Filter by domain:",all:"All",e3:"Journey",h3:"Experience & education",e4:"Recognition",h4:"Certifications & involvement",e5:"Let’s connect",ch:"A PFE where technology creates value? <span>Let’s talk.</span>",cs:"I’m looking for a 2027 PFE in AI or full-stack development. A project, a question? Write to me, I reply quickly.",av:"Available for a 2027 PFE internship",ph:"Phone",lo:"Location",f1:"Name *",f2:"Subject *",f3:"I prefer to be contacted by *",p1:"Your name",p2:"What is this about?",p3:"Write your message here…",snd:"Send message ↗",repo:"⧉ View repository",hi:"Hello Imen,",mn:"My name is",sj:"Subject"}};
+const SK={"Langages|Languages":"Python · C · C++ · Java · JavaScript · HTML5 · CSS · PHP · Solidity","Frameworks":"Spring Boot · FastAPI · Django · Flask · Laminas · Qt · Scikit-learn · LangChain · LangGraph · Optuna · Hardhat · ethers.js","IA & Data|AI & Data":"IA générative · Agents IA · ReAct · RAG · LLM · OCR · Deep Learning · Vision · Hadoop · HDFS · YARN · MapReduce · MySQL · Power BI","Cloud · Réseaux · DevOps|Cloud · Networks · DevOps":"AWS · Linux · Git · GitLab · CI/CD · K3s · MQTT · Tailscale · nftables · Suricata · Wireshark · JWT · Postman · Swagger","Blockchain":"Ethereum · Solidity · Hardhat · MetaMask · ethers.js · keccak / SHA-256","Tests|Testing":"JUnit · Cucumber · Gherkin · JaCoCo · CI/CD"};
+const F=[["all"],["ai","IA|AI"],["data","Data"],["cloud","Cloud"],["security","Sécurité|Security"],["blockchain","Blockchain"],["qa","QA"],["backend","Back-end"],["embedded","Embarqué|Embedded"]];
+// [domaines, icône, titre, méta, [fr,en], métriques [valeur, label fr|en], stack, dépôt]
+const P=[
+["ai backend","🧾","Plateforme IA de factures","Stage ICT · 2026",["OCR + LLM + agents IA pour extraire et retrouver les données des factures. Django, ERP Laminas, FastAPI.","OCR + LLM + AI agents to extract and retrieve invoice data. Django, Laminas ERP, FastAPI."],[["3","couches|layers"],["OCR","+ LLM + agents"],["Laminas","ERP PHP"]],"Python,FastAPI,Django,PHP/Laminas,MySQL,OCR,LLM","erp-ai-laminas"],
+["ai qa backend","🧪","Plateforme de tests IA","PFA · 2026",["Agents LangGraph générant des tests Gherkin depuis des User Stories ; orchestrateur Spring Boot sécurisé.","LangGraph agents generating Gherkin tests from User Stories; secured Spring Boot orchestrator."],[["JWT","sécurité|security"],["JaCoCo","couverture|coverage"],["RAG","+ CI/CD"]],"LangGraph,Spring Boot,RAG,JaCoCo","langGraph"],
+["security cloud","🛡️","FogWatch","Projet d’équipe",["Détection collaborative d’attaques sur 3 sites : Suricata, corrélateur MQTT, blocage nftables.","Collaborative attack detection on 3 sites: Suricata, MQTT correlator, nftables blocking."],[["3","sites"],["2","modes isolé/collab.|isolated/collab."],["nftables","blocage|blocking"]],"Suricata,K3s,MQTT,Tailscale","FogWatch"],
+["ai","📚","SLRResearchAI","Projet pédagogique · 5 TD",["Assistant LLM contrôlé pour revues systématiques : questions de recherche, agent ReAct, screening, RAG.","Controlled LLM assistant for systematic literature reviews: research questions, ReAct agent, screening, RAG."],[["5","TD"],["ReAct","agent"],["RAG","contexte|context"]],"Python,LLM,ReAct,RAG","SLRResearchAI"],
+["qa ai","🚦","QAPilot-AI","En cours · QA",["Pipeline QA piloté par l’IA : exigences, génération et gestion de tests, exécution, CI/CD et reporting.","AI-driven QA pipeline: requirements, test generation and management, execution, CI/CD and reporting."],[["6","étapes|stages"],["CI/CD","automatisé|automated"],["IA","reporting"]],"IA,Tests,CI/CD,Reporting","QAPilot-AI"],
+["ai data","📈","PerfPulse","IA & BI · en cours",["Un agent surveille des KPI, détecte les évolutions, identifie produit et région, rédige une conclusion.","An agent monitors KPIs, spots changes, identifies product and region, writes a conclusion."],[["KPI","suivi|monitoring"],["Power BI","restitution|reporting"],["LLM","conclusion"]],"Python,LLM,Power BI","PerfPulse-Agent-IA-d-analyse-des-performances-d-entreprise"],
+["blockchain security","⛓️","Dossiers médicaux","Blockchain · Ethereum",["Gestion de dossiers médicaux : hash SHA-256/keccak enregistré on-chain pour vérifier l’intégrité.","Medical records app: SHA-256/keccak hash stored on-chain to verify integrity."],[["SHA-256","hash"],["On-chain","intégrité|integrity"],["MetaMask","wallet"]],"Solidity,Hardhat,ethers.js,MetaMask","medical-records-blockchain-integrity"],
+["security ai blockchain","🔐","EVA-Guard","Prototype · fork d’équipe",["Détection et confirmation agentiques d’attaques sur nœuds Ethereum : ML, LLM + RAG, agents de corrélation.","Agentic detection and confirmation of attacks on Ethereum nodes: ML, LLM + RAG, correlation agents."],[["2","attaques|attacks"],["5","agents"],["3","décisions|decisions"]],"ML,LLM,RAG,Ethereum","EVA-Guard"],
+["ai data","🛍️","Prédiction de churn","Machine learning",["Clustering, classification du churn et régression optimisés avec Optuna, API Flask temps réel.","Clustering, churn classification and regression tuned with Optuna, real-time Flask API."],[["3","tâches ML|ML tasks"],["Optuna","optimisation|tuning"],["Flask","API"]],"Scikit-learn,Optuna,Flask","projet_ml_retail"],
+["data","🐘","Big Data e-commerce","Hadoop · MapReduce",["Cluster Hadoop (1 master, 2 slaves) : HDFS, YARN et analyses MapReduce (ventes, clients, géographie).","Hadoop cluster (1 master, 2 slaves): HDFS, YARN and MapReduce analyses (sales, customers, geography)."],[["1+2","nœuds|nodes"],["3","analyses"],["HDFS","stockage|storage"]],"Hadoop,HDFS,YARN,MapReduce","hadoop-project"],
+["embedded","🚗","Simulateur automobile","Stage KPIT · 2025",["Simulateur virtuel CAN, CAN FD, Ethernet, SOME/IP sans matériel, interface Qt, trafic Wireshark.","Virtual CAN, CAN FD, Ethernet and SOME/IP simulator with no hardware, Qt UI, Wireshark traffic."],[["4","protocoles|protocols"],["0","matériel|hardware"],["Wireshark","analyse|analysis"]],"C++,Qt,Linux,Wireshark","automotive-comm-simulator"],
+["ai","🤟","Langue des signes","Deep learning · équipe",["Détection des gestes de la main par vision par ordinateur, classification deep learning, traduction en texte.","Hand-gesture detection with computer vision, deep-learning classification, translation to text."],[["3","étapes|steps"],["Temps réel","real-time"],["DL","gestes|gestures"]],"Python,Vision,Deep Learning,Jupyter","Sign-Language-Recognition-System"],
+["cloud","☁️","AWS Vehicle Tracker","Cloud · équipe",["Interface web de suivi de véhicules s’appuyant sur des services AWS. Projet en équipe.","Web interface for vehicle tracking built on AWS services. Team project."],[["AWS","cloud"],["Web","interface"],["Équipe|Team","dépôt commun|shared repo"]],"HTML,AWS,Cloud","AWS_Vehicle_Tracker"],
+["ai qa","🔁","RAG & boucle de tests","Variante du PFA",["Génération de tests enrichie par RAG et boucle de correction itérative. Projet en équipe.","Test generation enriched by RAG and an iterative correction loop. Team project."],[["RAG","contexte|context"],["Boucle|Loop","itérative|iterative"],["Équipe|Team","PFA"]],"Python,RAG,LLM","RagAndLoopVersionTestProject"],
+["backend","🧩","Microservices","Back-end · équipe",["Services Java en microservices (Spring Boot, API REST, sécurité JWT) liés à la plateforme de tests IA.","Java microservices (Spring Boot, REST APIs, JWT security) tied to the AI testing platform."],[["REST","API"],["JWT","sécurité|security"],["Spring Boot","Java"]],"Java,Spring Boot,JWT,REST","microservices"]];
+const T=(s,i)=>{const a=s.split("|");return a[L=="fr"?0:1]??a[0]};
+const tg=t=>`<span class="tag">${t}</span>`;
+function paint(){
+ document.documentElement.lang=L;
+ document.querySelectorAll("[data-k]").forEach(e=>e.innerHTML=D[L][e.dataset.k]);
+ document.querySelectorAll("[data-p]").forEach(e=>e.placeholder=D[L][e.dataset.p]);
+ document.querySelectorAll("#lg button").forEach(b=>b.classList.toggle("on",b.dataset.l==L));
+ $("#sk").innerHTML=Object.entries(SK).map(([k,v])=>`<div class="card"><h3>${T(k)}</h3>${v.split(" · ").map(tg).join("")}</div>`).join("");
+ const cur=($("#fl .on")||{}).dataset?.f||"all";
+ $("#fl").innerHTML=F.map(([k,l])=>`<button class="fb ${k==cur?"on":""}" data-f="${k}">${k=="all"?D[L].all:T(l)}</button>`).join("");
+ $("#pj").innerHTML=P.map(p=>`<div class="card pj" data-d="${p[0]}"><span class="ico">${p[1]}</span><h3>${p[2]}</h3><div class="meta">${p[3]}</div><p>${p[4][L=="fr"?0:1]}</p><div class="mx">${p[5].map(m=>`<div><b>${T(m[0])}</b><small>${T(m[1])}</small></div>`).join("")}</div>${p[6].split(",").map(tg).join("")}<br><a class="go" href="${R+p[7]}" target="_blank" rel="noopener">${D[L].repo}</a></div>`).join("");
+ filt(cur);
+ const fr=L=="fr",tl=[
+ [fr?"Juin – Juil. 2026":"Jun – Jul 2026",fr?"Stage — ICT (Innovative Computer Technology), Sfax":"Internship — ICT, Sfax",fr?"Plateforme IA de gestion de factures : OCR, LLM, agents IA, Django, Laminas/PHP, FastAPI.":"AI invoice-management platform: OCR, LLM, AI agents, Django, Laminas/PHP, FastAPI.",""],
+ [fr?"Juin – Août 2025":"Jun – Aug 2025","Stage — KPIT Technologies",fr?"Simulateur de communication automobile (CAN, CAN FD, Ethernet, SOME/IP), Qt, Wireshark, Linux.":"Automotive communication simulator (CAN, CAN FD, Ethernet, SOME/IP), Qt, Wireshark, Linux.",""],
+ [fr?"2024 – Présent":"2024 – Present",fr?"Génie Informatique & Mathématiques Appliquées — ENIS":"Computer Engineering & Applied Maths — ENIS",fr?"École Nationale d’Ingénieurs de Sfax · 3ᵉ année du cycle ingénieur.":"National Engineering School of Sfax · 3rd year.",`<div class="gr"><span>${fr?"1ʳᵉ année":"Year 1"} · <b>14,66</b> · ${fr?"rang":"rank"} <b>10/79</b></span><span>${fr?"2ᵉ année":"Year 2"} · <b>15,62</b> · ${fr?"rang":"rank"} <b>6/81</b></span></div>`],
+ ["2022 – 2024",fr?"Cycle préparatoire Maths-Physique — IPEIS":"Preparatory cycle Maths-Physics — IPEIS",fr?"Concours National : rang 200 sur 1800. Bac Mathématiques, mention Très Bien (2022).":"National exam: rank 200 out of 1800. Maths baccalaureate, Very Good (2022).",""]];
+ $("#tl").innerHTML=tl.map(e=>`<div class="card"><div class="meta" style="color:var(--p)">${e[0]}</div><h3 style="color:var(--ink)">${e[1]}</h3><p style="margin:2px 0 0">${e[2]}</p>${e[3]}</div>`).join("");
+ const cr=[["💻","C Advanced","Cisco",0],["🔄","Scrum Fundamentals","SCRUMstudy",0],["🌐","Cisco DevNet",fr?"Cisco · préparation en cours":"Cisco · in progress",1],["🎤","Pitch Yourself For A Career",fr?"Organisatrice du forum":"Forum organizer",0],["⚡","IEEE",fr?"Membre":"Member",0]];
+ $("#cr").innerHTML=cr.map(c=>`<div class="card cr ${c[3]?"act":""}"><span class="ico">${c[0]}</span><h3>${c[1]}</h3><p style="margin:0">${c[2]}</p>${c[3]?`<span class="live"><i></i>${fr?"EN COURS":"IN PROGRESS"}</span>`:""}</div>`).join("");
+ document.querySelectorAll(".card").forEach(c=>{c.classList.add("rv");io.observe(c)});
+}
+function filt(f){document.querySelectorAll(".pj").forEach(c=>c.classList.toggle("hide",f!="all"&&!c.dataset.d.split(" ").includes(f)))}
+document.addEventListener("click",e=>{const b=e.target.closest(".fb");if(b){document.querySelectorAll(".fb").forEach(x=>x.classList.toggle("on",x==b));filt(b.dataset.f)}
+ const l=e.target.closest("#lg button");if(l){L=l.dataset.l;try{localStorage.setItem("l",L)}catch(x){}paint()}});
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target);setTimeout(()=>e.target.classList.remove("rv","in"),900)}}),{threshold:.1});
+paint();
+// compteurs
+document.querySelectorAll("[data-n]").forEach(el=>{const n=+el.dataset.n,d=n%1?2:0;let i=0;const t=setInterval(()=>{i=Math.min(n,i+n/40);el.textContent=d?i.toFixed(2).replace(".",","):Math.ceil(i);if(i>=n)clearInterval(t)},35)});
+// machine à écrire dynamique : domaines issus des projets
+const PH={fr:["Élève ingénieure · IA & agents LLM","Cloud & systèmes distribués","Data & Big Data","Développement Full-Stack","Blockchain & sécurité"],en:["Engineering student · AI & LLM agents","Cloud & distributed systems","Data & Big Data","Full-Stack development","Blockchain & security"]};
+const CH={fr:["Agents IA · RAG","Cloud · AWS","Big Data · Hadoop","Full-Stack","Web3 · Ethereum"],en:["AI agents · RAG","Cloud · AWS","Big Data · Hadoop","Full-Stack","Web3 · Ethereum"]};
+let pi=0,ci=0,del=false;(function tick(){const ph=PH[L][pi%5];ci+=del?-1:1;$("#tw").textContent=ph.slice(0,ci);$("#chip2").textContent="✦ "+CH[L][pi%5];
+ if(!del&&ci>=ph.length){del=true;return setTimeout(tick,1800)}if(del&&ci<=0){del=false;pi++}setTimeout(tick,del?30:65)})();
+// rail du parcours + nav active + thème
+const tl=$("#tl"),secs=[...document.querySelectorAll("section[id]")],ls=[...document.querySelectorAll(".links a[href^='#']")];
+addEventListener("scroll",()=>{const r=tl.getBoundingClientRect();tl.style.setProperty("--pr",Math.max(0,Math.min(1,(innerHeight*.6-r.top)/r.height))*100+"%");
+ const y=scrollY+120,c=secs.filter(s=>s.offsetTop<=y).pop();ls.forEach(a=>a.classList.toggle("on",c&&a.getAttribute("href")=="#"+c.id))},{passive:true});
+const tb=$("#tg");let st="light";try{st=localStorage.getItem("t")||(matchMedia("(prefers-color-scheme:dark)").matches?"dark":"light")}catch(e){}
 const ap=t=>{document.documentElement.dataset.t=t;tb.textContent=t=="dark"?"☀️":"🌙"};ap(st);
-tb.onclick=()=>{const t=document.documentElement.dataset.t=="dark"?"light":"dark";localStorage.setItem("t",t);ap(t)};
-
-/* ---- Langue FR/EN ---- */
-const SKE=["Languages","Frameworks & libraries","AI & data","Networks, DevOps & tools","Testing"];
-const PJE=[["AI-powered invoice management platform","ICT internship · Jun – Jul 2026","OCR + LLM + smart search + AI agents to extract and retrieve invoice data. Multi-layer architecture: Django admin, Laminas ERP, FastAPI AI layer."],
-["FogWatch","Team project","Collaborative attack detection for fog computing: Suricata detects, a correlator aggregates events over MQTT and triggers an nftables block."],
-["AI-driven functional testing platform","Final-year project (PFA) · 2026","LangGraph agents generate Gherkin tests from User Stories, with a JWT-secured Spring Boot orchestrator, JaCoCo coverage, a RAG pipeline and CI/CD."],
-["AI performance analysis agent","AI & BI","An agent spots KPI variations, identifies the responsible region and product, then writes a natural-language conclusion. Results visualized in Power BI."],
-["E-commerce churn prediction","Machine learning","Clustering, churn classification and regression tuned with Optuna, deployed through a real-time Flask prediction API."],
-["E-commerce Big Data","Hadoop / MapReduce","Hadoop cluster (1 master, 2 slaves): HDFS storage, YARN resources and MapReduce analyses (sales, customers, geographic breakdown)."],
-["Automotive communication simulator","KPIT internship · 2025","Virtual simulator for CAN, CAN FD, Ethernet and SOME/IP without physical hardware, with a Qt interface and Wireshark traffic visualization."],
-["Sign language recognition","Deep learning","Real-time hand-gesture recognition with computer vision and deep learning, translated into text. Team project."],
-["AWS Vehicle Tracker","Cloud","Web interface for vehicle tracking built on AWS services. Team project."],
-["RAG & test-generation loop","LLM agents","Variant of the AI testing platform: test generation enriched by RAG and an iterative correction loop. Team project."],
-["Microservices architecture","Back-end","Java microservices (Spring Boot, REST APIs, JWT security) tied to the AI testing platform. Team project."]];
-const EXE=[["Internship — AI-powered invoice management platform","ICT (Innovative Computer Technology) · Sfax","June – July 2026","OCR + LLM + AI agents to extract, structure and retrieve invoice data. Multi-layer architecture: Django admin, Laminas/PHP ERP, Python/FastAPI AI layer, authentication, roles and licences."],
-["Internship — Automotive communication simulator","KPIT Technologies","June – August 2025","Simulation of automotive communications (CAN, CAN FD, Ethernet, SOME/IP) without physical hardware, with a Qt interface, Wireshark analysis and Linux network isolation."]];
-const EDE=[["2024 — Present","Computer Engineering & Applied Mathematics","ENIS — National Engineering School of Sfax · Engineering cycle, 3rd year"],["2022 — 2024","Preparatory cycle in Maths-Physics","IPEIS · National competitive exam: rank 200"],["2022","Baccalaureate in Mathematics","Very Good distinction"]];
-const CRE=[["C Advanced","Certification · Cisco"],["Scrum Fundamentals","Certification · SCRUMstudy"],["Pitch Yourself For A Career forum","Involvement · Organizer"],["IEEE","Involvement · Member"]];
-const S=[['.links a[href="#skills"]',"Skills"],['.links a[href="#projects"]',"Projects"],['.links a[href="#experience"]',"Experience"],['.links a[href="#education"]',"Education"],['.links a[href="#credentials"]',"Certifications"],
-['.badge','<i class="dot"></i>Available for a PFE (Final-Year Project) 2027'],
-['.lead','Engineering student in <b>Computer Engineering</b> at ENIS, specialized in <b>artificial intelligence</b> (LLM agents, RAG, machine learning) and <b>full-stack development</b>. I am looking for a <b>PFE (Final-Year Project internship)</b> to build intelligent systems, from idea to deployment.'],
-['.stats div:nth-child(1) small',"Internships"],['.stats div:nth-child(2) small',"Projects"],['.stats div:nth-child(3) small',"National exam rank"],['.btns a:nth-child(1)',"✉ Contact me"],
-['#skills .eyebrow',"Capabilities"],['#skills h2',"Skills &amp; technologies"],['#projects .eyebrow',"Portfolio"],['#projects h2',"Projects"],['#experience .eyebrow',"Professional experience"],['#experience h2',"Experience"],['#education .eyebrow',"Education"],['#education h2',"Academic background"],['#credentials .eyebrow',"Recognition"],['#credentials h2',"Certifications &amp; involvement"],['#contact .eyebrow',"Let’s connect"],
-['#c-ph h3',"Phone"],['#c-lo h3',"Location"],['#c-lo p',"Sfax, Tunisia"],['#c-av h3',"Availability"],['#c-av p',"Final-Year Project (PFE) — 2027"],
-['.cta h3',"A PFE where technology creates value?"],['.cta p',"Available for a Final-Year Project in 2027, in AI or full-stack development."],['.cta .btn',"✉ Send a message"]];
-const ids=["#sk","#pj","#ex","#ed","#cr"],H={};
-ids.forEach(i=>H[i]=$(i).innerHTML.replace(/ rv"/g,'"'));
-const T=(a,f)=>a.map(f).join("");
-function L(l){localStorage.setItem("l",l);document.documentElement.lang=l;document.querySelectorAll("#lg button").forEach(b=>b.classList.toggle("on",b.dataset.l==l));
-S.forEach(([q,e])=>{const el=$(q);if(!el)return;if(!(q in H))H[q]=el.innerHTML;el.innerHTML=l=="fr"?H[q]:e});
-document.title=l=="fr"?"Imen Kammoun — Élève ingénieure en Génie Informatique":"Imen Kammoun — Computer Engineering Student";
-if(l=="fr"){ids.forEach(i=>$(i).innerHTML=H[i]);return}
-$("#sk").innerHTML=T(Object.values(SK),(v,i)=>`<div class="card"><h3>${SKE[i]}</h3>${T(v.split(" · ").map(x=>({"IA générative":"Generative AI","Agents IA":"AI agents"}[x]||x)),tg)}</div>`);
-$("#pj").innerHTML=T(PJ,(p,i)=>`<div class="card"><span class="ico">${p[0]}</span><h3>${PJE[i][0]}</h3><div class="meta">${PJE[i][1]}</div><p>${PJE[i][2]}</p>${T(p[4].split(","),tg)}<br>${p[5]?`<a class="go" href="${R+p[5]}" target="_blank" rel="noopener">⧉ View repository</a>`:""}</div>`);
-$("#ex").innerHTML=T(EX,(e,i)=>`<div class="card"><h3>${EXE[i][0]}</h3><div class="meta">${EXE[i][1]} · ${EXE[i][2]}</div><p>${EXE[i][3]}</p>${T(e[4].split(","),tg)}</div>`);
-$("#ed").innerHTML=T(EDE,e=>`<div class="card"><div class="meta" style="color:var(--p)">${e[0]}</div><h3 style="color:var(--ink)">${e[1]}</h3><p style="margin:2px 0 0">${e[2]}</p></div>`);
-$("#cr").innerHTML=T(CRE,(c,i)=>`<div class="card"><span class="ico">${CR[i][0]}</span><h3 style="color:var(--ink);font-size:16px">${c[0]}</h3><p style="margin:0">${c[1]}</p></div>`)}
-document.querySelectorAll("#lg button").forEach(b=>b.onclick=()=>L(b.dataset.l));
-L(localStorage.getItem("l")||(navigator.language.startsWith("fr")?"fr":"en"));
-/* ---- Particules : un anneau se forme autour de la souris ---- */
-const cv=$("#pc"),cx=cv.getContext("2d");let W,HH,P=[],mx=-9,my=0,tt=0;
-function rs(){const d=devicePixelRatio||1;W=cv.clientWidth;HH=cv.clientHeight;cv.width=W*d;cv.height=HH*d;cx.setTransform(d,0,0,d,0,0);
-P=Array.from({length:Math.min(1200,W*1.2|0)},()=>({x:Math.random()*W,y:HH*.12+Math.random()*HH*.76,v:.15+Math.random()*.4,o:Math.random()*6,ox:0,oy:0,a:Math.random()<.14}))}
-rs();addEventListener("resize",rs);
-cv.addEventListener("pointermove",e=>{const r=cv.getBoundingClientRect();mx=e.clientX-r.left;my=e.clientY-r.top});
-cv.addEventListener("pointerleave",()=>mx=-9);
-(function f(){tt+=.016;cx.clearRect(0,0,W,HH);const ax=mx>0?mx:W/2+Math.sin(tt*.6)*W*.3,ay=mx>0?my:HH/2,ink=getComputedStyle(document.documentElement).getPropertyValue("--ink");
-for(const p of P){p.x+=p.v;if(p.x>W)p.x=0;const bx=p.x,by=p.y+Math.sin(tt+p.o)*8,dx=bx-ax,dy=by-ay,d=Math.hypot(dx,dy)||1,R=66;
-let ex=0,ey=0;if(d<R+36){const r=R+p.o*2.5;ex=ax+dx/d*r-bx;ey=ay+dy/d*r-by}
-p.ox+=(ex-p.ox)*.12;p.oy+=(ey-p.oy)*.12;cx.globalAlpha=.6;cx.fillStyle=p.a?"#D6336C":ink;cx.fillRect(bx+p.ox,by+p.oy,2,2)}
-requestAnimationFrame(f)})();
-if(PHONE){const a=$("#c-ph");a.hidden=false;a.href="tel:"+PHONE.replace(/\s/g,"");a.querySelector("p").textContent=PHONE}
-/* ---- Curseur personnalisé ---- */
-if(matchMedia("(pointer:fine)").matches){const d=document.createElement("i"),r=document.createElement("i");d.className="cd";r.className="cr";document.body.append(d,r);let x=0,y=0,rx=0,ry=0;
-addEventListener("pointermove",e=>{x=e.clientX;y=e.clientY;d.style.transform=`translate(${x}px,${y}px)`;r.classList.toggle("h",!!e.target.closest("a,button,.card,.tag"))});
-(function m(){rx+=(x-rx)*.18;ry+=(y-ry)*.18;r.style.transform=`translate(${rx}px,${ry}px)`;requestAnimationFrame(m)})()}
+tb.onclick=()=>{const t=document.documentElement.dataset.t=="dark"?"light":"dark";try{localStorage.setItem("t",t)}catch(e){}ap(t)};
+// formulaire : WhatsApp ou email
+function send(e){e.preventDefault();const d=D[L],n=$("#nm").value.trim(),m=$("#em").value.trim(),s=$("#sb").value.trim(),b=$("#ms").value.trim();
+ const msg=`${d.hi}\n\n${d.mn} ${n}.\nEmail : ${m}\n${d.sj} : ${s}\n\n${b}`;
+ if($("#md").value=="mail")location.href=`mailto:imen.kammoun@enis.tn?subject=${encodeURIComponent(s)}&body=${encodeURIComponent(msg)}`;
+ else window.open(`https://wa.me/21624202249?text=${encodeURIComponent(msg)}`,"_blank")}
 </script>
 </body>
 </html>
