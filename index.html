@@ -41,7 +41,7 @@ h1{font-size:clamp(42px,7vw,76px);line-height:1.05;font-weight:800;margin:20px 0
 .ph .c{position:absolute;inset:0;border-radius:50%;overflow:hidden;border:5px solid var(--p);background:var(--soft);display:grid;place-items:center;font-size:84px;font-weight:800;color:var(--p);box-shadow:var(--sh)}.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .chip{position:absolute;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:8px 14px;font-size:13px;font-weight:800;box-shadow:var(--sh);animation:fl 5s ease-in-out infinite alternate}.c1{top:6%;left:-12%}.c2{bottom:8%;right:-8%;animation-delay:-2s;color:var(--p)}
 .tag{display:inline-block;border:1px solid var(--line);background:var(--card);border-radius:99px;padding:3px 12px;font-size:12.5px;font-weight:600;margin:3px 4px 3px 0;transition:.2s}.tag:hover{transform:scale(1.07);border-color:var(--p2)}
-.grid{display:grid;gap:20px}.g2{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:repeat(3,1fr)}.g5{grid-template-columns:repeat(5,1fr)}
+.grid{display:grid;gap:20px}.g2{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:repeat(3,1fr)}
 .card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px;box-shadow:var(--sh);transition:.3s;position:relative}
 .card:hover{transform:translateY(-6px);border-color:var(--p2);box-shadow:0 20px 44px rgba(214,51,108,.16)}
 .card h3{font-size:18px;margin:6px 0 2px;color:var(--p)}.card p{color:var(--mut);font-size:14.5px;margin:8px 0 10px}.ico{font-size:28px}.meta{font-size:12.5px;font-weight:700}
@@ -53,7 +53,6 @@ h1{font-size:clamp(42px,7vw,76px);line-height:1.05;font-weight:800;margin:20px 0
 .tl>div{position:relative;margin-bottom:22px}.tl>div::before{content:"";position:absolute;left:-39px;top:26px;width:15px;height:15px;border-radius:50%;background:var(--p);border:3px solid var(--bg);box-shadow:0 0 0 3px var(--soft),0 0 12px var(--p2)}
 .gr{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px}.gr span{background:var(--soft);border:1px solid var(--p2);border-radius:99px;padding:4px 14px;font-size:13px;font-weight:700}.gr b{color:var(--p)}
 .live{display:inline-flex;align-items:center;gap:6px;background:linear-gradient(135deg,var(--p),var(--p2));color:#fff;border-radius:99px;padding:2px 11px;font-size:11px;font-weight:800;letter-spacing:.06em}.live i{width:7px;height:7px;border-radius:50%;background:#fff;animation:pl 1.4s infinite}
-.cr{text-align:center}.cr.act{border-color:var(--p);box-shadow:0 0 0 3px var(--soft),var(--sh)}.cr h3{color:var(--ink);font-size:16px}
 /* contact */
 .ct{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(24px,5vw,60px);background:var(--card);border:1px solid var(--line);border-radius:26px;padding:clamp(24px,4vw,48px);box-shadow:var(--sh);position:relative;overflow:hidden}
 .ct::before{content:"";position:absolute;width:320px;height:320px;border-radius:50%;top:-200px;right:-90px;background:var(--soft)}
@@ -68,7 +67,7 @@ input:focus,select:focus,textarea:focus{outline:0;border-color:var(--p);box-shad
 .send{border:0;border-radius:99px;padding:14px;font-weight:800;font-size:15px;color:#fff;cursor:pointer;background:linear-gradient(135deg,var(--p),var(--p2));box-shadow:0 10px 26px rgba(214,51,108,.35);transition:.25s}.send:hover{transform:translateY(-2px);filter:brightness(1.07)}
 footer{border-top:1px solid var(--line);padding:26px 0;text-align:center;color:var(--mut);font-size:14px}
 .rv{opacity:0;transform:translateY(26px);transition:.7s}.rv.in{opacity:1;transform:none}
-@media(max-width:900px){.hero,.g2,.g3,.ct{grid-template-columns:1fr}.g5{grid-template-columns:repeat(2,1fr)}.links a{display:none}.ph{order:-1;width:230px}.chip{display:none}.fr2{grid-template-columns:1fr}}
+@media(max-width:900px){.hero,.g2,.g3,.ct{grid-template-columns:1fr}.links a{display:none}.ph{order:-1;width:230px}.chip{display:none}.fr2{grid-template-columns:1fr}}
 
 /* ===== barre de progression ===== */
 #bar{position:fixed;top:0;left:0;height:3px;width:0;z-index:20;background:linear-gradient(90deg,var(--p),var(--p2));border-radius:0 3px 3px 0}
@@ -173,12 +172,61 @@ footer h4{color:#fff;font-size:13px;letter-spacing:.1em;text-transform:uppercase
 .mgh a:hover{color:var(--p2)}
 @media(max-width:560px){.mb .mx{grid-template-columns:1fr}.mo{padding:12px}.mb{border-radius:22px}}
 @media(prefers-reduced-motion:reduce){.mb,.mo,.pop{transition:none;animation:none}}
+
+/* ===== CERTIFICATIONS (cartes) ===== */
+#cr{grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:26px}
+.cc{padding:28px;border-radius:24px;display:flex;flex-direction:column}
+.cc .top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;min-height:48px}
+.lgo{width:46px;height:46px;border-radius:11px;overflow:hidden;display:block;flex-shrink:0}
+.lgo svg{width:100%;height:100%;display:block}
+.lgo.w2{width:auto;max-width:150px}
+.cc .cat{margin-top:18px;font-size:12.5px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--p)}
+.cc h3{font-size:21px;line-height:1.3;font-weight:800;color:var(--ink);margin:8px 0 0}
+.cc p{font-size:15px;line-height:1.7;margin:12px 0 20px;flex:1}
+.cc .ft2{border-top:1px solid var(--line);padding-top:16px}
+.vf{display:inline-flex;align-items:center;gap:8px;font:inherit;font-weight:700;font-size:14.5px;color:var(--p);background:none;border:0;padding:0;cursor:pointer}
+.vf:hover{text-decoration:underline}
+.vf.off{color:var(--mut);cursor:default;font-weight:600}.vf.off:hover{text-decoration:none}
+.prog{display:inline-flex;align-items:center;gap:7px;background:rgba(34,197,94,.12);border:1px solid rgba(34,197,94,.45);color:#16a34a;border-radius:99px;padding:3px 12px;font-size:12.5px;font-weight:800;white-space:nowrap}
+.prog i{width:8px;height:8px;border-radius:50%;background:#22c55e;animation:pl 1.6s infinite}
+
+/* ===== ENGAGEMENT (carte PYFAC + mosaïque de photos) ===== */
+#en{display:grid;gap:26px}
+.pyc{display:grid;grid-template-columns:.9fr 1.1fr;gap:36px;padding:36px;border-radius:28px;align-items:start}
+.pyc:hover{transform:none}
+.pyc h3{font-size:clamp(22px,2.6vw,30px);color:var(--ink);font-weight:800;margin:0 0 20px;line-height:1.2}
+.rls{display:grid;gap:14px}
+.rl2{display:flex;gap:16px;align-items:flex-start;background:var(--soft);border:1px solid var(--line);border-radius:18px;padding:16px 18px}
+.rb{width:58px;height:58px;border-radius:15px;flex-shrink:0;display:grid;place-items:center;background:linear-gradient(135deg,#1a1033,#5b21b6);color:#fff;font-weight:800;font-size:10.5px;letter-spacing:.06em;text-align:center;line-height:1.1;font-size-adjust:none}
+.rb b{display:block;font-size:21px;color:#fff;letter-spacing:0}
+.rl2 .t{font-weight:800;font-size:17px;color:var(--ink);line-height:1.3}
+.rl2 .dtm{font-size:13.5px;font-weight:800;color:var(--p)}
+.rl2 p{margin:6px 0 0;font-size:14.5px;line-height:1.65;color:var(--mut)}
+.rl2 .tgs{margin-top:8px}
+.mos{display:grid;grid-template-columns:repeat(6,1fr);grid-template-rows:1fr 1fr 1.5fr;gap:12px;aspect-ratio:9/7}
+.mos button{border:0;padding:0;border-radius:18px;overflow:hidden;cursor:pointer;background:var(--soft);position:relative;min-height:0}
+.mos img{width:100%;height:100%;object-fit:cover;display:block}
+.mos button:nth-child(1){grid-column:1/5;grid-row:1/3}.mos button:nth-child(2){grid-column:5/7;grid-row:1}.mos button:nth-child(3){grid-column:5/7;grid-row:2}.mos button:nth-child(4){grid-column:1/4;grid-row:3}.mos button:nth-child(5){grid-column:4/7;grid-row:3}
+.mos button:focus-visible{outline:3px solid var(--p2);outline-offset:3px}
+.ieee{margin:0}
+.ieee:hover{transform:translateY(-3px)}
+@media(max-width:900px){.pyc{grid-template-columns:1fr;padding:22px}.mos{aspect-ratio:auto;grid-template-columns:1fr 1fr;grid-template-rows:auto}.mos button{grid-column:auto!important;grid-row:auto!important;aspect-ratio:3/2}.mos button:nth-child(1){grid-column:1/3!important}}
+
+/* ===== visionneuse photos / certificats ===== */
+.lbx2{position:fixed;inset:0;z-index:80;display:grid;place-items:center;padding:24px;background:rgba(10,6,14,.88);backdrop-filter:blur(6px);opacity:0;visibility:hidden;transition:opacity .25s,visibility .25s}
+.lbx2.open{opacity:1;visibility:visible}
+#lbi{max-width:min(1100px,92vw);max-height:80vh;border-radius:14px;box-shadow:0 30px 80px rgba(0,0,0,.5);background:#fff}
+#lbc{position:absolute;bottom:22px;left:0;right:0;text-align:center;color:#e5e7eb;font-size:14px;font-weight:600}
+.lbb{position:absolute;border:0;border-radius:50%;width:48px;height:48px;background:rgba(255,255,255,.14);color:#fff;font-size:24px;font-weight:800;cursor:pointer;transition:.2s}
+.lbb:hover{background:var(--p)}
+#lbx{top:20px;right:20px}#lbp{left:20px;top:50%;margin-top:-24px}#lbn{right:20px;top:50%;margin-top:-24px}
+.lbb[hidden]{display:none}
 </style>
 </head>
 <body>
 <div id="bar"></div><div id="cd"></div><div id="cr2"></div><div id="ts"></div>
 <nav><div class="w"><a href="#hero" class="logo">Imen Kammoun<b>.</b></a>
-<div class="links"><a href="#skills" data-k="n1"></a><a href="#projects" data-k="n2"></a><a href="#path" data-k="n3"></a><a href="#credentials" data-k="n4"></a><a href="#contact" data-k="n5"></a>
+<div class="links"><a href="#skills" data-k="n1"></a><a href="#projects" data-k="n2"></a><a href="#path" data-k="n3"></a><a href="#credentials" data-k="n4"></a><a href="#engagement" data-k="n6"></a><a href="#contact" data-k="n5"></a>
 <div id="lg"><button data-l="fr">FR</button><button data-l="en">EN</button></div><button class="ib" id="tg" aria-label="Theme">🌙</button></div></div></nav>
 
 <section id="hero"><div class="blob b1"></div><div class="blob b2"></div><div class="w hero">
@@ -202,9 +250,14 @@ footer h4{color:#fff;font-size:13px;letter-spacing:.1em;text-transform:uppercase
 <section id="skills" class="alt"><div class="w"><span class="eyebrow" data-k="e1"></span><h2 data-k="h1"></h2><div class="grid g2 sk" id="sk"></div></div></section>
 <section id="projects"><div class="w"><span class="eyebrow" data-k="e2"></span><h2 data-k="h2"></h2><p class="sub" data-k="sub2"></p><div class="fl" id="fl"></div><div class="grid g3" id="pj"></div><button class="more" id="more" type="button"></button></div></section>
 <section id="path" class="alt"><div class="w"><span class="eyebrow" data-k="e3"></span><h2 data-k="h3"></h2><div class="tl" id="tl"></div></div></section>
-<section id="credentials"><div class="w"><span class="eyebrow" data-k="e4"></span><h2 data-k="h4"></h2><div class="grid g5" id="cr"></div></div></section>
 
-<section id="contact" class="alt"><div class="w"><div class="ct">
+<!-- CERTIFICATIONS -->
+<section id="credentials"><div class="w"><span class="eyebrow" data-k="e4"></span><h2 data-k="h4"></h2><p class="sub" data-k="sub4"></p><div class="grid" id="cr"></div></div></section>
+
+<!-- ENGAGEMENT -->
+<section id="engagement" class="alt"><div class="w"><span class="eyebrow" data-k="e6"></span><h2 data-k="h6"></h2><p class="sub" data-k="sub6"></p><div id="en"></div></div></section>
+
+<section id="contact"><div class="w"><div class="ct">
 <div><span class="eyebrow" data-k="e5"></span>
 <h2 data-k="ch"></h2><p class="sub" style="margin:10px 0 0" data-k="cs"></p>
 <span class="pill"><i></i><span data-k="av"></span></span>
@@ -225,7 +278,7 @@ footer h4{color:#fff;font-size:13px;letter-spacing:.1em;text-transform:uppercase
 <footer><div class="w">
 <div class="ft">
  <div><a href="#hero" class="logo">Imen Kammoun<b>.</b></a><p data-k="ftp"></p></div>
- <div><h4>Navigation</h4><div class="fn"><a href="#skills" data-k="n1"></a><a href="#projects" data-k="n2"></a><a href="#path" data-k="n3"></a><a href="#credentials" data-k="n4"></a><a href="#contact" data-k="n5"></a></div></div>
+ <div><h4>Navigation</h4><div class="fn"><a href="#skills" data-k="n1"></a><a href="#projects" data-k="n2"></a><a href="#path" data-k="n3"></a><a href="#credentials" data-k="n4"></a><a href="#engagement" data-k="n6"></a><a href="#contact" data-k="n5"></a></div></div>
  <div><h4>Contact</h4><div class="fi">
   <a href="mailto:imen.kammoun@enis.tn">✉️ imen.kammoun@enis.tn</a>
   <a href="tel:+21624202249">📱 +216 24 202 249</a>
@@ -239,12 +292,15 @@ footer h4{color:#fff;font-size:13px;letter-spacing:.1em;text-transform:uppercase
 <!-- fenêtre de détails d'un projet -->
 <div class="mo" id="mo" aria-hidden="true"><div class="mb" role="dialog" aria-modal="true" aria-labelledby="mt"><button class="mcl" id="mcl" type="button">✕</button><div id="mc"></div></div></div>
 
+<!-- visionneuse photos / certificats -->
+<div class="lbx2" id="lb" aria-hidden="true"><button class="lbb" id="lbx" type="button" aria-label="Close">✕</button><button class="lbb" id="lbp" type="button" aria-label="Previous">‹</button><img id="lbi" alt=""><button class="lbb" id="lbn" type="button" aria-label="Next">›</button><div id="lbc"></div></div>
+
 <script>
 const $=s=>document.querySelector(s),R="https://github.com/kammounimen/";
 let L="fr";try{L=localStorage.getItem("l")||(navigator.language.startsWith("fr")?"fr":"en")}catch(e){}
 let X=false,MI=-1; // X = tous les projets affichés ; MI = projet ouvert dans la fenêtre
-const D={fr:{n1:"Compétences",n2:"Projets",n3:"Parcours",n4:"Certifications",n5:"Contact",badge:"Disponible pour un PFE 2027",lead:"Élève ingénieure en <b>Génie Informatique</b> à l’ENIS (<b>rang 6/81</b>), spécialisée en <b>IA</b> (agents LLM, RAG, ML), <b>Cloud &amp; Big Data</b> et <b>full-stack</b>. Je cherche un <b>PFE</b> pour concevoir des systèmes intelligents, de l’idée jusqu’au déploiement.",s1:"Stages",s2:"Projets",s3:"Rang concours national",s4:"Moyenne 2ᵉ année ENIS",cta:"✉ Me contacter",e1:"Capacités",h1:"Compétences & technologies",e2:"Portfolio",h2:"Projets",sub2:"15 projets en IA, cloud, data, sécurité, blockchain et back-end. Clique sur un projet pour voir ses détails, ou filtre par domaine :",all:"Tous",e3:"Parcours",h3:"Expérience & formation",e4:"Reconnaissances",h4:"Certifications & engagement",e5:"Restons en contact",ch:"Un PFE où la technologie crée de la valeur ? <span>Parlons-en.</span>",cs:"Je recherche un PFE en 2027 en IA ou développement full-stack. Un projet, une question ? Écrivez-moi, je réponds rapidement.",av:"Disponible pour un PFE en 2027",ph:"Téléphone",lo:"Localisation",f1:"Nom *",f2:"Sujet *",f3:"Je préfère être contactée par *",p1:"Votre nom",p2:"Quel est l’objet de votre message ?",p3:"Écrivez votre message ici…",snd:"Envoyer le message ↗",repo:"⧉ Voir le dépôt",hi:"Bonjour Imen,",mn:"Je m’appelle",sj:"Sujet",hint:"✦ Approche ta souris des points",ft:"Conçu avec passion",ftp:"Élève ingénieure · IA, Cloud & Full-Stack. Disponible pour un PFE en 2027.",dt:"Voir les détails →",va:"Voir tous les projets",vl:"Voir moins",tech:"Technologies",desc:"Description",key:"Points clés",gh:"Lien GitHub",cl:"Fermer"},
-en:{n1:"Skills",n2:"Projects",n3:"Journey",n4:"Certifications",n5:"Contact",badge:"Available for a 2027 final-year project",lead:"Engineering student in <b>Computer Engineering</b> at ENIS (<b>rank 6/81</b>), specialized in <b>AI</b> (LLM agents, RAG, ML), <b>Cloud &amp; Big Data</b> and <b>full-stack</b>. I’m looking for a <b>PFE internship</b> to build intelligent systems, from idea to deployment.",s1:"Internships",s2:"Projects",s3:"National exam rank",s4:"ENIS 2nd-year average",cta:"✉ Contact me",e1:"Capabilities",h1:"Skills & technologies",e2:"Portfolio",h2:"Projects",sub2:"15 projects across AI, cloud, data, security, blockchain and back-end. Click a project to see its details, or filter by domain:",all:"All",e3:"Journey",h3:"Experience & education",e4:"Recognition",h4:"Certifications & involvement",e5:"Let’s connect",ch:"A PFE where technology creates value? <span>Let’s talk.</span>",cs:"I’m looking for a 2027 PFE in AI or full-stack development. A project, a question? Write to me, I reply quickly.",av:"Available for a 2027 PFE internship",ph:"Phone",lo:"Location",f1:"Name *",f2:"Subject *",f3:"I prefer to be contacted by *",p1:"Your name",p2:"What is this about?",p3:"Write your message here…",snd:"Send message ↗",repo:"⧉ View repository",hi:"Hello Imen,",mn:"My name is",sj:"Subject",hint:"✦ Move your mouse over the dots",ft:"Built with passion",ftp:"Engineering student · AI, Cloud & Full-Stack. Available for a 2027 final-year project.",dt:"View details →",va:"View all projects",vl:"Show less",tech:"Technologies",desc:"Description",key:"Key points",gh:"GitHub link",cl:"Close"}};
+const D={fr:{n1:"Compétences",n2:"Projets",n3:"Parcours",n4:"Certifications",n6:"Engagement",n5:"Contact",badge:"Disponible pour un PFE 2027",lead:"Élève ingénieure en <b>Génie Informatique</b> à l’ENIS (<b>rang 6/81</b>), spécialisée en <b>IA</b> (agents LLM, RAG, ML), <b>Cloud &amp; Big Data</b> et <b>full-stack</b>. Je cherche un <b>PFE</b> pour concevoir des systèmes intelligents, de l’idée jusqu’au déploiement.",s1:"Stages",s2:"Projets",s3:"Rang concours national",s4:"Moyenne 2ᵉ année ENIS",cta:"✉ Me contacter",e1:"Capacités",h1:"Compétences & technologies",e2:"Portfolio",h2:"Projets",sub2:"15 projets en IA, cloud, data, sécurité, blockchain et back-end. Clique sur un projet pour voir ses détails, ou filtre par domaine :",all:"Tous",e3:"Parcours",h3:"Expérience & formation",e4:"Reconnaissances",h4:"Certifications",sub4:"Mes certifications obtenues et en cours de préparation. Clique sur « Vérifier » pour voir le certificat.",e6:"Vie associative",h6:"Engagement",sub6:"Organisation d’événements et vie associative : au cœur de l’équipe logistique du forum PYFAC. Clique sur une photo pour l’agrandir.",e5:"Restons en contact",ch:"Un PFE où la technologie crée de la valeur ? <span>Parlons-en.</span>",cs:"Je recherche un PFE en 2027 en IA ou développement full-stack. Un projet, une question ? Écrivez-moi, je réponds rapidement.",av:"Disponible pour un PFE en 2027",ph:"Téléphone",lo:"Localisation",f1:"Nom *",f2:"Sujet *",f3:"Je préfère être contactée par *",p1:"Votre nom",p2:"Quel est l’objet de votre message ?",p3:"Écrivez votre message ici…",snd:"Envoyer le message ↗",repo:"⧉ Voir le dépôt",hi:"Bonjour Imen,",mn:"Je m’appelle",sj:"Sujet",hint:"✦ Approche ta souris des points",ft:"Conçu avec passion",ftp:"Élève ingénieure · IA, Cloud & Full-Stack. Disponible pour un PFE en 2027.",dt:"Voir les détails →",va:"Voir tous les projets",vl:"Voir moins",tech:"Technologies",desc:"Description",key:"Points clés",gh:"Lien GitHub",cl:"Fermer",prog:"En cours",ph1:"Photo",phs:"Photos"},
+en:{n1:"Skills",n2:"Projects",n3:"Journey",n4:"Certifications",n6:"Engagement",n5:"Contact",badge:"Available for a 2027 final-year project",lead:"Engineering student in <b>Computer Engineering</b> at ENIS (<b>rank 6/81</b>), specialized in <b>AI</b> (LLM agents, RAG, ML), <b>Cloud &amp; Big Data</b> and <b>full-stack</b>. I’m looking for a <b>PFE internship</b> to build intelligent systems, from idea to deployment.",s1:"Internships",s2:"Projects",s3:"National exam rank",s4:"ENIS 2nd-year average",cta:"✉ Contact me",e1:"Capabilities",h1:"Skills & technologies",e2:"Portfolio",h2:"Projects",sub2:"15 projects across AI, cloud, data, security, blockchain and back-end. Click a project to see its details, or filter by domain:",all:"All",e3:"Journey",h3:"Experience & education",e4:"Recognition",h4:"Certifications",sub4:"Certifications I have earned and the ones I am preparing. Click “Verify” to see the certificate.",e6:"Community",h6:"Engagement",sub6:"Event organization and student life: part of the logistics team behind the PYFAC forum. Click a photo to enlarge it.",e5:"Let’s connect",ch:"A PFE where technology creates value? <span>Let’s talk.</span>",cs:"I’m looking for a 2027 PFE in AI or full-stack development. A project, a question? Write to me, I reply quickly.",av:"Available for a 2027 PFE internship",ph:"Phone",lo:"Location",f1:"Name *",f2:"Subject *",f3:"I prefer to be contacted by *",p1:"Your name",p2:"What is this about?",p3:"Write your message here…",snd:"Send message ↗",repo:"⧉ View repository",hi:"Hello Imen,",mn:"My name is",sj:"Subject",hint:"✦ Move your mouse over the dots",ft:"Built with passion",ftp:"Engineering student · AI, Cloud & Full-Stack. Available for a 2027 final-year project.",dt:"View details →",va:"View all projects",vl:"Show less",tech:"Technologies",desc:"Description",key:"Key points",gh:"GitHub link",cl:"Close",prog:"In progress",ph1:"Photo",phs:"Photos"}};
 const SK={"Langages|Languages":"Python · C · C++ · Java · JavaScript · HTML5 · CSS · PHP · Solidity","Frameworks":"Spring Boot · FastAPI · Django · Flask · Laminas · Qt · Scikit-learn · LangChain · LangGraph · Optuna · Hardhat · ethers.js","IA & Data|AI & Data":"IA générative · Agents IA · ReAct · RAG · LLM · OCR · Deep Learning · Vision · Hadoop · HDFS · YARN · MapReduce · MySQL · Power BI","Cloud · Réseaux · DevOps|Cloud · Networks · DevOps":"AWS · Linux · Git · GitLab · CI/CD · K3s · MQTT · Tailscale · nftables · Suricata · Wireshark · JWT · Postman · Swagger","Blockchain":"Ethereum · Solidity · Hardhat · MetaMask · ethers.js · keccak / SHA-256","Tests|Testing":"JUnit · Cucumber · Gherkin · JaCoCo · CI/CD"};
 const F=[["all"],["ai","IA|AI"],["data","Data"],["cloud","Cloud"],["security","Sécurité|Security"],["blockchain","Blockchain"],["qa","QA"],["backend","Back-end"],["embedded","Embarqué|Embedded"]];
 /* Chaque projet :
@@ -298,10 +354,36 @@ const P=[
  "Back-end · projet d’équipe|Back-end · team project",
  "Services Java en architecture microservices avec Spring Boot, API REST et sécurité JWT.¶Ils sont liés à la plateforme de tests IA.|Java services in a microservices architecture with Spring Boot, REST APIs and JWT security.¶They are tied to the AI testing platform."]];
 const T=(s,i)=>{const a=s.split("|");return a[L=="fr"?0:1]??a[0]};
+
+/* ====== CERTIFICATIONS ======
+ Pour chaque certification : l = texte du lien · g = clé de la galerie (images ci-dessous)
+ u = lien officiel de vérification (laisse "" pour ouvrir l'image du certificat à la place) · prog:1 = en cours (pas de lien) */
+const LG_CISCO=`<svg viewBox="0 0 46 46"><rect width="46" height="46" fill="#0B1F3A"/><g fill="#fff"><rect x="9" y="12" width="2" height="7" rx="1"/><rect x="14" y="8" width="2" height="11" rx="1"/><rect x="19" y="11" width="2" height="8" rx="1"/><rect x="24" y="6" width="2" height="13" rx="1"/><rect x="29" y="11" width="2" height="8" rx="1"/><rect x="34" y="8" width="2" height="11" rx="1"/></g><text x="23" y="35" font-size="10" font-weight="800" text-anchor="middle" fill="#fff" font-family="Arial">CISCO</text></svg>`;
+const LG_SCRUM=`<svg viewBox="0 0 150 46"><circle cx="23" cy="23" r="17" fill="#fff" stroke="#1D5FA8" stroke-width="3.5"/><path d="M14 24l7 7 13-15" fill="none" stroke="#3CB043" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><text x="48" y="27" font-size="15" font-weight="800" fill="#1D5FA8" font-family="Arial">SCRUM<tspan fill="#3CB043">study</tspan></text></svg>`;
+const CR=[
+ {lg:LG_CISCO,cat:"Programmation système|Systems programming",t:"Cisco C Advanced – Systèmes & architecture mémoire|Cisco C Advanced – Systems & Memory Architecture",d:"Maîtrise avancée de la gestion manuelle de la mémoire, de l’arithmétique des pointeurs, des structures de données dynamiques, des appels système POSIX et de l’optimisation algorithmique.|Advanced proficiency in manual memory management, pointer arithmetic, dynamic data structures, POSIX system calls, and algorithmic optimization.",l:"Vérifier le certificat|Verify credential",g:"c-adv",u:""},
+ {lg:LG_CISCO,cat:"Automatisation réseau & API|Network automation & APIs",t:"Cisco Certified DevNet Associate",d:"Préparation en cours de la certification DevNet Associate : programmabilité réseau, API, Python et automatisation.|Currently preparing for the DevNet Associate certification, covering network programmability, APIs, Python, and automation.",prog:1},
+ {lg:LG_SCRUM,w2:1,cat:"Méthodologie agile|Agile methodology",t:"Scrum Fundamentals Certified (SFC™)",d:"Compréhension certifiée de la philosophie du développement logiciel agile, de la planification de sprint, de la coordination d’équipes pluridisciplinaires et du backlog grooming.|Certified understanding of Agile software development philosophy, sprint planning, cross-functional team coordination, and backlog grooming.",l:"Voir le certificat|View certificate",g:"scrum",u:""}
+];
+/* ====== ENGAGEMENT ======
+ yr = période · r = rôle · d = description · tags = étiquettes */
+const PY=[
+ {n:"11",yr:"2025 – 2026",r:"Organisatrice · Équipe logistique|Organizer · Logistics team",d:"Membre de l’équipe logistique du forum PYFAC 11 : préparation des salles, accueil des participants et coordination sur place avec les partenaires.|Member of the logistics team of the PYFAC 11 forum: room preparation, welcoming participants and on-site coordination with partners.",tags:"Logistique|Logistics,Événementiel|Event management,Partenaires|Partners"},
+ {n:"10",yr:"2024",r:"Organisatrice · Équipe logistique|Organizer · Logistics team",d:"Organisation de la 10ᵉ édition du forum PYFAC (novembre 2024) au sein de l’équipe logistique : installation, flux des participants et bon déroulement de l’événement.|Organization of the 10th edition of the PYFAC forum (November 2024) within the logistics team: setup, participant flow and smooth running of the event.",tags:"Logistique|Logistics,Événementiel|Event management,Travail d’équipe|Teamwork"}
+];
+const IEEE={yr:"2024 – ",r:"Membre|Member",d:"Membre actif de la communauté IEEE : événements techniques, networking et développement de compétences.|Active member of the IEEE community: technical events, networking and skills development."};
+/* ====== GALERIES (images affichées dans la visionneuse) ======
+ Place tes fichiers dans les dossiers « certs/ » et « photos/ » à côté de index.html, avec ces noms (ou change les chemins ici). */
+const G={
+ "c-adv":["certs/cisco-c-advanced.png","certs/cisco-c-advanced-statement.png"],
+ "scrum":["certs/scrum-sfc.png"],
+ "pyfac":["photos/pyfac-group.jpg","photos/pyfac-audience.jpg","photos/pyfac-panel.jpg","photos/pyfac-pwc.jpg","photos/pyfac-hall.jpg"]
+};
 // icônes des technologies (devicon) + emojis de secours
 const IC={"python":"python","c":"c","c++":"cplusplus","java":"java","javascript":"javascript","html5":"html5","html":"html5","css":"css3","php":"php","php/laminas":"php","solidity":"solidity","spring boot":"spring","fastapi":"fastapi","django":"django","flask":"flask","qt":"qt","scikit-learn":"scikitlearn","langchain":"langchain","hardhat":"hardhat","hadoop":"hadoop","mysql":"mysql","power bi":"powerbi","aws":"amazonwebservices","linux":"linux","git":"git","gitlab":"gitlab","k3s":"kubernetes","postman":"postman","swagger":"swagger","wireshark":"wireshark","ethereum":"ethereum","junit":"junit","cucumber":"cucumber","jupyter":"jupyter"};
 const EM={"ia générative":"✨","agents ia":"🤖","ia":"🤖","rag":"🔎","llm":"🧠","ocr":"📄","deep learning":"🧬","vision":"👁️","hdfs":"🗄️","yarn":"🧶","mapreduce":"🗺️","ci/cd":"⚙️","mqtt":"📡","tailscale":"🔒","nftables":"🧱","suricata":"🛡️","jwt":"🔑","langgraph":"🕸️","optuna":"🎯","metamask":"🦊","ethers.js":"⬢","keccak / sha-256":"#️⃣","jacoco":"📊","gherkin":"🥒","react":"💭","rest":"🔗","tests":"🧪","reporting":"📊","ml":"📈","laminas":"🧩","cloud":"☁️"};
 const tg=t=>{const k=t.toLowerCase().trim(),s=IC[k],e=EM[k];return `<span class="tag">${s?`<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${s}/${s}-original.svg" alt="" loading="lazy" onerror="if(!this.t){this.t=1;this.src=this.src.replace('-original','-plain')}else this.remove()">`:e?`<span>${e}</span>`:""}${t}</span>`};
+const tg2=t=>`<span class="tag">${T(t)}</span>`;
 const repoLabel=(a,i)=>a.length>1?(i?"ERP Laminas":"Agent IA"):"";
 function paint(){
  document.documentElement.lang=L;
@@ -321,8 +403,16 @@ function paint(){
  [fr?"2024 – Présent":"2024 – Present",fr?"Génie Informatique & Mathématiques Appliquées — ENIS":"Computer Engineering & Applied Maths — ENIS",fr?"École Nationale d’Ingénieurs de Sfax · 3ᵉ année du cycle ingénieur.":"National Engineering School of Sfax · 3rd year.",`<div class="gr"><span>${fr?"1ʳᵉ année":"Year 1"} · <b>14,66</b> · ${fr?"rang":"rank"} <b>10/79</b></span><span>${fr?"2ᵉ année":"Year 2"} · <b>15,62</b> · ${fr?"rang":"rank"} <b>6/81</b></span></div>`],
  ["2022 – 2024",fr?"Cycle préparatoire Maths-Physique — IPEIS":"Preparatory cycle Maths-Physics — IPEIS",fr?"Concours National : rang 200 sur 1800. Bac Mathématiques, mention Très Bien (2022).":"National exam: rank 200 out of 1800. Maths baccalaureate, Very Good (2022).",""]];
  $("#tl").innerHTML=tl.map(e=>`<div class="card"><div class="meta" style="color:var(--p)">${e[0]}</div><h3 style="color:var(--ink)">${e[1]}</h3><p style="margin:2px 0 0">${e[2]}</p>${e[3]}</div>`).join("");
- const cr=[["💻","C Advanced","Cisco",0],["🔄","Scrum Fundamentals","SCRUMstudy",0],["🌐","Cisco DevNet",fr?"Cisco · préparation en cours":"Cisco · in progress",1],["🎤","Pitch Yourself For A Career",fr?"Organisatrice du forum":"Forum organizer",0],["⚡","IEEE",fr?"Membre":"Member",0]];
- $("#cr").innerHTML=cr.map(c=>`<div class="card cr ${c[3]?"act":""}"><span class="ico">${c[0]}</span><h3>${c[1]}</h3><p style="margin:0">${c[2]}</p>${c[3]?`<span class="live"><i></i>${fr?"EN COURS":"IN PROGRESS"}</span>`:""}</div>`).join("");
+
+ // ----- Certifications (cartes) -----
+ const ext=`<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6"/><path d="M10 14L21 3"/></svg>`;
+ $("#cr").innerHTML=CR.map(c=>{
+  const link=c.prog?"":(c.u?`<a class="vf" href="${c.u}" target="_blank" rel="noopener">${ext} ${T(c.l)}</a>`:`<button class="vf" type="button" data-lb="${c.g}">${ext} ${T(c.l)}</button>`);
+  return `<div class="card cc"><div class="top"><span class="lgo ${c.w2?"w2":""}">${c.lg}</span>${c.prog?`<span class="prog"><i></i>${D[L].prog}</span>`:""}</div><div class="cat">${T(c.cat)}</div><h3>${T(c.t)}</h3><p>${T(c.d)}</p>${link?`<div class="ft2">${link}</div>`:""}</div>`}).join("");
+
+ // ----- Engagement : carte PYFAC + mosaïque de photos -----
+ $("#en").innerHTML=`<div class="card pyc"><div><h3>Pitch Yourself For A Career (PYFAC)</h3><div class="rls">${PY.map(r=>`<div class="rl2"><span class="rb"><span>PYFAC<b>${r.n}</b></span></span><div><div class="t">${T(r.r)}</div><div class="dtm">${r.yr}</div><p>${T(r.d)}</p><div class="tgs">${r.tags.split(",").map(tg2).join("")}</div></div></div>`).join("")}</div></div><div class="mos">${G.pyfac.map((s,i)=>`<button type="button" class="${i==0?"a":""}" data-lb="pyfac" data-i="${i}" aria-label="PYFAC ${i+1}"><img src="${s}" alt="PYFAC" loading="lazy" onerror="this.remove()"></button>`).join("")}</div></div><div class="card rl2 ieee"><span class="rb" style="background:linear-gradient(135deg,var(--p),var(--p2));font-size:24px">⚡</span><div><div class="t">IEEE · ${T(IEEE.r)}</div><div class="dtm">${IEEE.yr}</div><p>${T(IEEE.d)}</p></div></div>`;
+
  document.querySelectorAll(".card").forEach(c=>{c.classList.add("rv");io.observe(c)});
 }
 // filtre : dans « Tous », seuls les projets phares sont visibles tant que « Voir tous » n'est pas activé
@@ -343,13 +433,27 @@ function renderM(){const p=P[MI],d=D[L];
  <h4>${d.gh}</h4>${rp.map((r,j)=>`<div class="mgh">${rp.length>1?`<b>${repoLabel(rp,j)} :</b> `:""}<a href="${R+r}" target="_blank" rel="noopener">github.com/kammounimen/${r}</a></div>`).join("")}`}
 function openM(i){MI=i;renderM();const o=$("#mo");o.classList.add("open");o.setAttribute("aria-hidden","false");document.body.style.overflow="hidden";$(".mb").scrollTop=0;setTimeout(()=>$("#mcl").focus({preventScroll:true}),50)}
 function closeM(){const o=$("#mo");o.classList.remove("open");o.setAttribute("aria-hidden","true");document.body.style.overflow="";const c=document.querySelector(`.pj[data-i="${MI}"]`);MI=-1;if(c)c.focus({preventScroll:true})}
+
+// ----- visionneuse photos / certificats -----
+let LB=[],LI=0,LO=false;
+function showLb(){const s=LB[LI],im=$("#lbi");im.style.display="";im.src=s;im.alt=s;
+ 
+ $("#lbp").hidden=$("#lbn").hidden=LB.length<2}
+$("#lbi").onerror=function(){this.style.display="none";$("#lbc").textContent=(L=="fr"?"Image introuvable : ":"Image not found: ")+LB[LI]};
+function openLb(k,i){LB=G[k]||[];if(!LB.length)return;LI=Math.min(i||0,LB.length-1);LO=true;showLb();const o=$("#lb");o.classList.add("open");o.setAttribute("aria-hidden","false");document.body.style.overflow="hidden"}
+function closeLb(){LO=false;const o=$("#lb");o.classList.remove("open");o.setAttribute("aria-hidden","true");document.body.style.overflow=MI>=0?"hidden":""}
+function stepLb(d){LI=(LI+d+LB.length)%LB.length;showLb()}
+
 document.addEventListener("click",e=>{
  const b=e.target.closest(".fb");if(b){document.querySelectorAll(".fb").forEach(x=>x.classList.toggle("on",x==b));filt(b.dataset.f)}
  const l=e.target.closest("#lg button");if(l){L=l.dataset.l;try{localStorage.setItem("l",L)}catch(x){}paint()}
  if(e.target.closest("#more")){X=!X;filt("all");if(!X)$("#fl").scrollIntoView({behavior:"smooth",block:"center"})}
  const c=e.target.closest(".pj");if(c&&!e.target.closest("a"))openM(+c.dataset.i);
- if(e.target.id=="mo"||e.target.closest("#mcl"))closeM()});
+ if(e.target.id=="mo"||e.target.closest("#mcl"))closeM();
+ const z=e.target.closest("[data-lb]");if(z)openLb(z.dataset.lb,+z.dataset.i||0);
+ if(LO){if(e.target.id=="lb"||e.target.closest("#lbx"))closeLb();else if(e.target.closest("#lbp"))stepLb(-1);else if(e.target.closest("#lbn"))stepLb(1)}});
 document.addEventListener("keydown",e=>{
+ if(LO){if(e.key=="Escape")closeLb();if(e.key=="ArrowLeft"&&LB.length>1)stepLb(-1);if(e.key=="ArrowRight"&&LB.length>1)stepLb(1);return}
  if(e.key=="Escape"&&MI>=0)closeM();
  if((e.key=="Enter"||e.key==" ")&&e.target.classList&&e.target.classList.contains("pj")){e.preventDefault();openM(+e.target.dataset.i)}});
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target);setTimeout(()=>e.target.classList.remove("rv","in"),900)}}),{threshold:.1});
